@@ -1,12 +1,27 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel.Design;
+using System.Net;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace yugecin.sampbrowser
 {
-	public partial class frmMain : Form
+	partial class frmMain : Form
 	{
-		public frmMain()
+
+		private IServerProvider serverprovider;
+		private ServerQuery infoGrabber;
+
+		public frmMain( IServerProvider serverprovider )
 		{
+			this.serverprovider = serverprovider;
+			infoGrabber = new ServerQuery();
 			InitializeComponent();
+			Task.Factory.StartNew( LoadNext );
 		}
+
+		public void LoadNext()
+		{
+		}
+
 	}
 }
