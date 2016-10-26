@@ -5,8 +5,11 @@ namespace yugecin.sampbrowser
 	class TestServerProvider : IServerProvider
 	{
 
-		public IPEndPoint GetNext() {
-			return new IPEndPoint( new IPAddress( new byte[] { 127, 0, 0, 1 } ), 7777 );
+		public ServerInfo GetNext() {
+			ServerInfo info = new ServerInfo();
+			info.ip = "127.0.0.1";
+			info.port = 7777;
+			return info;
 		}
 
 	}

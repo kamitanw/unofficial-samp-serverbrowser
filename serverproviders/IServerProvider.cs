@@ -5,7 +5,7 @@ namespace yugecin.sampbrowser
 	interface IServerProvider
 	{
 
-		IPEndPoint GetNext();
+		ServerInfo GetNext();
 
 	}
 }
