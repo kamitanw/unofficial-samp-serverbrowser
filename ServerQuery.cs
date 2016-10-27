@@ -33,9 +33,13 @@ namespace yugecin.sampbrowser
 			c.Send( new byte[] {
 				(byte) 'S', (byte) 'A', (byte) 'M', (byte) 'P',
 				ipbytes[0], ipbytes[1], ipbytes[2], ipbytes[3],
-				(byte) ( info.port & 0xFF ), (byte) ( ( info.port >> 8 ) & 0xFF )
+				(byte) ( info.port & 0xFF ), (byte) ( ( info.port >> 8 ) & 0xFF ),
+				0x70, 0x34, 0x31, 0x35, 0x0
 			}, 15 );
+			System.Console.WriteLine( "sent");
 			byte[] response = c.Receive( ref IPEP );
+			System.Console.WriteLine( "hiiii" );
+			System.Console.WriteLine( response.Length );
 			if( response.Length >= 15 )
 			{
 				info.online = (
