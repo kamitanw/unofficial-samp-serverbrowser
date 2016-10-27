@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.Design;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using System.Windows.Forms;
 
 namespace yugecin.sampbrowser
@@ -9,18 +7,44 @@ namespace yugecin.sampbrowser
 	{
 
 		private IServerProvider serverprovider;
-		private ServerQuery infoGrabber;
+		private ServerQuery query;
 
 		public frmMain( IServerProvider serverprovider )
 		{
 			this.serverprovider = serverprovider;
-			infoGrabber = new ServerQuery();
+			query = new ServerQuery();
 			InitializeComponent();
-			Task.Factory.StartNew( LoadNext );
+			Thread t = new Thread( LoadServers );
+			t.Start();
 		}
 
-		public void LoadNext()
+		private void LoadServers()
 		{
+			for( ; ; )
+			{
+				ServerInfo info = serverprovider.GetNext();
+				if( info.ip == null )
+				{
+					return;
+				}
+				query.LoadInitial( info );
+				if( info.online )
+				{
+					addServer( info );
+				}
+			}
+		}
+
+		private delegate void _addServer( ServerInfo info );
+		private void addServer( ServerInfo info )
+		{
+			if( this.InvokeRequired )
+			{
+				this.BeginInvoke( new _addServer( addServer ), new object[] { info } );
+				return;
+			}
+			lstServers.Items.Add( new ListViewItem( info.GetListItemText() ) );
+			System.Console.WriteLine(info.ping);
 		}
 
 	}
