@@ -45,7 +45,7 @@
 			this.pnlControls.Location = new System.Drawing.Point(0, 0);
 			this.pnlControls.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlControls.Name = "pnlControls";
-			this.pnlControls.Size = new System.Drawing.Size(806, 24);
+			this.pnlControls.Size = new System.Drawing.Size(797, 22);
 			this.pnlControls.TabIndex = 0;
 			// 
 			// lstServers
@@ -61,15 +61,14 @@
             this.colPing,
             this.colMode,
             this.colLanguage});
-			this.lstServers.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lstServers.FullRowSelect = true;
 			this.lstServers.GridLines = true;
 			this.lstServers.HideSelection = false;
-			this.lstServers.Location = new System.Drawing.Point(0, 24);
+			this.lstServers.Location = new System.Drawing.Point(0, 22);
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(580, 459);
+			this.lstServers.Size = new System.Drawing.Size(603, 481);
 			this.lstServers.TabIndex = 1;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -91,7 +90,6 @@
 			// colPing
 			// 
 			this.colPing.Text = "Ping";
-			this.colPing.Width = 40;
 			// 
 			// colMode
 			// 
@@ -107,22 +105,22 @@
 			// 
 			this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.lblStatus.Location = new System.Drawing.Point(0, 483);
+			this.lblStatus.Location = new System.Drawing.Point(0, 504);
 			this.lblStatus.Margin = new System.Windows.Forms.Padding(0);
 			this.lblStatus.Name = "lblStatus";
-			this.lblStatus.Size = new System.Drawing.Size(806, 25);
+			this.lblStatus.Size = new System.Drawing.Size(797, 23);
 			this.lblStatus.TabIndex = 2;
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// frmMain
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(806, 508);
+			this.ClientSize = new System.Drawing.Size(797, 527);
 			this.Controls.Add(this.lblStatus);
 			this.Controls.Add(this.lstServers);
 			this.Controls.Add(this.pnlControls);
-			this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "frmMain";
 			this.Text = "frmMain";
 			this.ResumeLayout(false);
