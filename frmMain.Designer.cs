@@ -112,7 +112,6 @@
 			this.lblStatus.Name = "lblStatus";
 			this.lblStatus.Size = new System.Drawing.Size(806, 25);
 			this.lblStatus.TabIndex = 2;
-			this.lblStatus.Text = "label1";
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// frmMain
