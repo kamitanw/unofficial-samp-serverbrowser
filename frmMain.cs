@@ -36,30 +36,29 @@ namespace yugecin.sampbrowser
 					servers++;
 					players += info.players;
 					freeslots += info.maxplayers - info.players;
-					addServer( info );
+					AddServer( info );
 					UpdateInfo( servers, players, freeslots );
 				}
 			}
 		}
 
-		private delegate void _addServer( ServerInfo info );
-		private void addServer( ServerInfo info )
+		private delegate void addServer( ServerInfo info );
+		private void AddServer( ServerInfo info )
 		{
 			if( this.InvokeRequired )
 			{
-				this.BeginInvoke( new _addServer( addServer ), new object[] { info } );
+				this.BeginInvoke( new addServer( AddServer ), new object[] { info } );
 				return;
 			}
 			lstServers.Items.Add( new ListViewItem( info.GetListItemText() ) );
-			System.Console.WriteLine(info.ping);
 		}
 
-		private delegate void _UpdateInfo( int servers, int players, int freeslots );
+		private delegate void updateInfo( int servers, int players, int freeslots );
 		private void UpdateInfo( int servers, int players, int freeslots )
 		{
 			if( this.InvokeRequired )
 			{
-				this.BeginInvoke( new _UpdateInfo( UpdateInfo ), new object[] { servers, players, freeslots } );
+				this.BeginInvoke( new updateInfo( UpdateInfo ), new object[] { servers, players, freeslots } );
 				return;
 			}
 			lblStatus.Text = string.Format( "{0} players on {1} servers ({2} player slots available)", players, servers, freeslots );
