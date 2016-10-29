@@ -8,14 +8,15 @@ namespace yugecin.sampbrowser
 
 		private IServerProvider serverprovider;
 		private ServerQuery query;
+		private Thread loadServersThread;
 
 		public frmMain( IServerProvider serverprovider )
 		{
 			this.serverprovider = serverprovider;
 			query = new ServerQuery();
 			InitializeComponent();
-			Thread t = new Thread( LoadServers );
-			t.Start();
+			loadServersThread = new Thread( LoadServers );
+			loadServersThread.Start();
 		}
 
 		private void LoadServers()
@@ -62,6 +63,16 @@ namespace yugecin.sampbrowser
 				return;
 			}
 			lblStatus.Text = string.Format( "{0} players on {1} servers ({2} player slots available)", players, servers, freeslots );
+		}
+
+		private void frmMain_FormClosed( object sender, FormClosedEventArgs e )
+		{
+			if( loadServersThread.IsAlive )
+			{
+				loadServersThread.Abort();
+				loadServersThread.Join();
+				// TODO: kill the socket or sth
+			}
 		}
 
 	}
