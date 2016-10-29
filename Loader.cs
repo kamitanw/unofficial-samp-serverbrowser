@@ -5,7 +5,7 @@ namespace yugecin.sampbrowser
 	class Loader
 	{
 
-		public static void Main()
+		static void Main()
 		{
 			Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
 #if DEBUGBUILD
