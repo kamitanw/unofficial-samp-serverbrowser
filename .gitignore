@@ -5,3 +5,7 @@
 /bin/
 /obj/
 *.htm
+*.obj
+*.netmodule
+*.exe
+*.pdb
