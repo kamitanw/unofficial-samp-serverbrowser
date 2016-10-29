@@ -9,3 +9,6 @@
 *.netmodule
 *.exe
 *.pdb
+
+# script that doesn't work, might investigate later
+SampLauncher.cs
