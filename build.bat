@@ -27,9 +27,9 @@ csc /target:module %~2 /addmodule:ServerInfo.netmodule serverproviders/IServerPr
 csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IserverProvider.netmodule serverproviders/TestServerProvider.cs
 csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IserverProvider.netmodule serverproviders/GameStateServerProvider.cs
 echo frmmain
-csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:ServerQuery.netmodule frmMain.cs frmMain.Designer.cs
+csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:ServerQuery.netmodule FrmMain.cs FrmMain.Designer.cs
 echo loader
-csc /target:module %~2 /addmodule:frmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER Loader.cs
+csc /target:module %~2 /addmodule:FrmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER Loader.cs
 echo.
 echo - linking
 link Advapi32.lib user32.lib mlauncher.obj ulauncher.obj ServerInfo.netmodule IServerProvider.netmodule TestServerProvider.netmodule GameStateServerProvider.netmodule ServerQuery.netmodule frmMain.netmodule Loader.netmodule /entry:yugecin.sampbrowser.Loader.Main /subsystem:%subsystem% /out:sampbrowser.exe /ltcg

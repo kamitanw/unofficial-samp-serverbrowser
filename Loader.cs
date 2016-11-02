@@ -9,9 +9,9 @@ namespace yugecin.sampbrowser
 		{
 			Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
 #if DEBUGBUILD
-			Application.Run( new frmMain( new TestServerProvider() ) );
+			Application.Run( new FrmMain( new TestServerProvider() ) );
 #else
-			Application.Run( new frmMain( new GamestateServerProvider() ) );
+			Application.Run( new FrmMain( new GamestateServerProvider() ) );
 #endif
 #if WITHLAUNCHER
 			MLauncher launcher = new MLauncher();

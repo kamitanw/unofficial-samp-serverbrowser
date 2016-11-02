@@ -3,14 +3,14 @@ using System.Windows.Forms;
 
 namespace yugecin.sampbrowser
 {
-	partial class frmMain : Form
+	partial class FrmMain : Form
 	{
 
 		private IServerProvider serverprovider;
 		private ServerQuery query;
 		private Thread loadServersThread;
 
-		public frmMain( IServerProvider serverprovider )
+		public FrmMain( IServerProvider serverprovider )
 		{
 			this.serverprovider = serverprovider;
 			query = new ServerQuery();
