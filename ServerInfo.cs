@@ -17,18 +17,9 @@ namespace yugecin.sampbrowser
 		public int ping;
 		public string mode;
 		public string language;
-
-		public string[] GetListItemText()
-		{
-			return new string[] {
-				password ? "X" : "",
-				hostname,
-				players + "/" + maxplayers,
-				ping.ToString(),
-				mode,
-				language
-			};
-		}
+		public bool wasOnline;
+		public int previousPlayers;
+		public int previousFreeSlots;
 
 	}
 }
