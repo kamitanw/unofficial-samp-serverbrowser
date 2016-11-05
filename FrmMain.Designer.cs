@@ -29,6 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.pnlControls = new System.Windows.Forms.Panel();
+			this.label5 = new System.Windows.Forms.Label();
+			this.txtName = new System.Windows.Forms.TextBox();
+			this.btnQuickconnect = new System.Windows.Forms.Button();
+			this.btnConnect = new System.Windows.Forms.Button();
 			this.lstServers = new System.Windows.Forms.ListView();
 			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,21 +41,17 @@
 			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lblStatus = new System.Windows.Forms.Label();
-			this.btnConnect = new System.Windows.Forms.Button();
-			this.btnQuickconnect = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtFilterHostname = new System.Windows.Forms.TextBox();
 			this.pnlFilters = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.txtFilterMode = new System.Windows.Forms.TextBox();
+			this.chkFilterOnline = new System.Windows.Forms.CheckBox();
+			this.chkFilterNotEmpty = new System.Windows.Forms.CheckBox();
+			this.chkFilterNotFull = new System.Windows.Forms.CheckBox();
+			this.chlFilterNoPW = new System.Windows.Forms.CheckBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtFilterLang = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.txtName = new System.Windows.Forms.TextBox();
-			this.chlFilterNoPW = new System.Windows.Forms.CheckBox();
-			this.chkFilterNotFull = new System.Windows.Forms.CheckBox();
-			this.chkFilterNotEmpty = new System.Windows.Forms.CheckBox();
-			this.chkFilterOnline = new System.Windows.Forms.CheckBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtFilterMode = new System.Windows.Forms.TextBox();
 			this.pnlControls.SuspendLayout();
 			this.pnlFilters.SuspendLayout();
 			this.SuspendLayout();
@@ -68,6 +68,45 @@
 			this.pnlControls.Name = "pnlControls";
 			this.pnlControls.Size = new System.Drawing.Size(792, 24);
 			this.pnlControls.TabIndex = 0;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(161, 1);
+			this.label5.Margin = new System.Windows.Forms.Padding(0);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(77, 23);
+			this.label5.TabIndex = 10;
+			this.label5.Text = "Name";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// txtName
+			// 
+			this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtName.Location = new System.Drawing.Point(238, 3);
+			this.txtName.Margin = new System.Windows.Forms.Padding(0);
+			this.txtName.Name = "txtName";
+			this.txtName.Size = new System.Drawing.Size(150, 20);
+			this.txtName.TabIndex = 11;
+			// 
+			// btnQuickconnect
+			// 
+			this.btnQuickconnect.Location = new System.Drawing.Point(66, 1);
+			this.btnQuickconnect.Margin = new System.Windows.Forms.Padding(0);
+			this.btnQuickconnect.Name = "btnQuickconnect";
+			this.btnQuickconnect.Size = new System.Drawing.Size(95, 23);
+			this.btnQuickconnect.TabIndex = 2;
+			this.btnQuickconnect.Text = "Quick connect";
+			this.btnQuickconnect.UseVisualStyleBackColor = true;
+			// 
+			// btnConnect
+			// 
+			this.btnConnect.Location = new System.Drawing.Point(0, 1);
+			this.btnConnect.Margin = new System.Windows.Forms.Padding(0);
+			this.btnConnect.Name = "btnConnect";
+			this.btnConnect.Size = new System.Drawing.Size(66, 23);
+			this.btnConnect.TabIndex = 1;
+			this.btnConnect.Text = "Connect";
+			this.btnConnect.UseVisualStyleBackColor = true;
 			// 
 			// lstServers
 			// 
@@ -89,7 +128,7 @@
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(598, 404);
+			this.lstServers.Size = new System.Drawing.Size(615, 404);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -111,11 +150,12 @@
 			// colPing
 			// 
 			this.colPing.Text = "Ping";
+			this.colPing.Width = 40;
 			// 
 			// colMode
 			// 
 			this.colMode.Text = "Mode";
-			this.colMode.Width = 100;
+			this.colMode.Width = 120;
 			// 
 			// colLanguage
 			// 
@@ -132,26 +172,6 @@
 			this.lblStatus.Size = new System.Drawing.Size(792, 25);
 			this.lblStatus.TabIndex = 2;
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// btnConnect
-			// 
-			this.btnConnect.Location = new System.Drawing.Point(0, 1);
-			this.btnConnect.Margin = new System.Windows.Forms.Padding(0);
-			this.btnConnect.Name = "btnConnect";
-			this.btnConnect.Size = new System.Drawing.Size(66, 23);
-			this.btnConnect.TabIndex = 1;
-			this.btnConnect.Text = "Connect";
-			this.btnConnect.UseVisualStyleBackColor = true;
-			// 
-			// btnQuickconnect
-			// 
-			this.btnQuickconnect.Location = new System.Drawing.Point(66, 1);
-			this.btnQuickconnect.Margin = new System.Windows.Forms.Padding(0);
-			this.btnQuickconnect.Name = "btnQuickconnect";
-			this.btnQuickconnect.Size = new System.Drawing.Size(95, 23);
-			this.btnQuickconnect.TabIndex = 2;
-			this.btnQuickconnect.Text = "Quick connect";
-			this.btnQuickconnect.UseVisualStyleBackColor = true;
 			// 
 			// label2
 			// 
@@ -192,24 +212,49 @@
 			this.pnlFilters.Size = new System.Drawing.Size(792, 20);
 			this.pnlFilters.TabIndex = 3;
 			// 
-			// label3
+			// chkFilterOnline
 			// 
-			this.label3.Location = new System.Drawing.Point(173, -1);
-			this.label3.Margin = new System.Windows.Forms.Padding(0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(60, 20);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Mode";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.chkFilterOnline.AutoSize = true;
+			this.chkFilterOnline.Location = new System.Drawing.Point(724, 1);
+			this.chkFilterOnline.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterOnline.Name = "chkFilterOnline";
+			this.chkFilterOnline.Size = new System.Drawing.Size(56, 18);
+			this.chkFilterOnline.TabIndex = 13;
+			this.chkFilterOnline.Text = "Online";
+			this.chkFilterOnline.UseVisualStyleBackColor = true;
 			// 
-			// txtFilterMode
+			// chkFilterNotEmpty
 			// 
-			this.txtFilterMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtFilterMode.Location = new System.Drawing.Point(233, 0);
-			this.txtFilterMode.Margin = new System.Windows.Forms.Padding(0);
-			this.txtFilterMode.Name = "txtFilterMode";
-			this.txtFilterMode.Size = new System.Drawing.Size(113, 20);
-			this.txtFilterMode.TabIndex = 7;
+			this.chkFilterNotEmpty.AutoSize = true;
+			this.chkFilterNotEmpty.Location = new System.Drawing.Point(650, 1);
+			this.chkFilterNotEmpty.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterNotEmpty.Name = "chkFilterNotEmpty";
+			this.chkFilterNotEmpty.Size = new System.Drawing.Size(74, 18);
+			this.chkFilterNotEmpty.TabIndex = 12;
+			this.chkFilterNotEmpty.Text = "Not Empty";
+			this.chkFilterNotEmpty.UseVisualStyleBackColor = true;
+			// 
+			// chkFilterNotFull
+			// 
+			this.chkFilterNotFull.AutoSize = true;
+			this.chkFilterNotFull.Location = new System.Drawing.Point(589, 1);
+			this.chkFilterNotFull.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterNotFull.Name = "chkFilterNotFull";
+			this.chkFilterNotFull.Size = new System.Drawing.Size(61, 18);
+			this.chkFilterNotFull.TabIndex = 11;
+			this.chkFilterNotFull.Text = "Not Full";
+			this.chkFilterNotFull.UseVisualStyleBackColor = true;
+			// 
+			// chlFilterNoPW
+			// 
+			this.chlFilterNoPW.AutoSize = true;
+			this.chlFilterNoPW.Location = new System.Drawing.Point(531, 1);
+			this.chlFilterNoPW.Margin = new System.Windows.Forms.Padding(0);
+			this.chlFilterNoPW.Name = "chlFilterNoPW";
+			this.chlFilterNoPW.Size = new System.Drawing.Size(58, 18);
+			this.chlFilterNoPW.TabIndex = 10;
+			this.chlFilterNoPW.Text = "No PW";
+			this.chlFilterNoPW.UseVisualStyleBackColor = true;
 			// 
 			// label4
 			// 
@@ -230,70 +275,26 @@
 			this.txtFilterLang.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterLang.TabIndex = 9;
 			// 
-			// label5
+			// label3
 			// 
-			this.label5.Location = new System.Drawing.Point(161, 1);
-			this.label5.Margin = new System.Windows.Forms.Padding(0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(77, 23);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Name";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label3.Location = new System.Drawing.Point(173, -1);
+			this.label3.Margin = new System.Windows.Forms.Padding(0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(60, 20);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Mode";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// txtName
+			// txtFilterMode
 			// 
-			this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtName.Location = new System.Drawing.Point(238, 3);
-			this.txtName.Margin = new System.Windows.Forms.Padding(0);
-			this.txtName.Name = "txtName";
-			this.txtName.Size = new System.Drawing.Size(150, 20);
-			this.txtName.TabIndex = 11;
+			this.txtFilterMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtFilterMode.Location = new System.Drawing.Point(233, 0);
+			this.txtFilterMode.Margin = new System.Windows.Forms.Padding(0);
+			this.txtFilterMode.Name = "txtFilterMode";
+			this.txtFilterMode.Size = new System.Drawing.Size(113, 20);
+			this.txtFilterMode.TabIndex = 7;
 			// 
-			// chlFilterNoPW
-			// 
-			this.chlFilterNoPW.AutoSize = true;
-			this.chlFilterNoPW.Location = new System.Drawing.Point(531, 1);
-			this.chlFilterNoPW.Margin = new System.Windows.Forms.Padding(0);
-			this.chlFilterNoPW.Name = "chlFilterNoPW";
-			this.chlFilterNoPW.Size = new System.Drawing.Size(58, 18);
-			this.chlFilterNoPW.TabIndex = 10;
-			this.chlFilterNoPW.Text = "No PW";
-			this.chlFilterNoPW.UseVisualStyleBackColor = true;
-			// 
-			// chkFilterNotFull
-			// 
-			this.chkFilterNotFull.AutoSize = true;
-			this.chkFilterNotFull.Location = new System.Drawing.Point(589, 1);
-			this.chkFilterNotFull.Margin = new System.Windows.Forms.Padding(0);
-			this.chkFilterNotFull.Name = "chkFilterNotFull";
-			this.chkFilterNotFull.Size = new System.Drawing.Size(61, 18);
-			this.chkFilterNotFull.TabIndex = 11;
-			this.chkFilterNotFull.Text = "Not Full";
-			this.chkFilterNotFull.UseVisualStyleBackColor = true;
-			// 
-			// chkFilterNotEmpty
-			// 
-			this.chkFilterNotEmpty.AutoSize = true;
-			this.chkFilterNotEmpty.Location = new System.Drawing.Point(650, 1);
-			this.chkFilterNotEmpty.Margin = new System.Windows.Forms.Padding(0);
-			this.chkFilterNotEmpty.Name = "chkFilterNotEmpty";
-			this.chkFilterNotEmpty.Size = new System.Drawing.Size(74, 18);
-			this.chkFilterNotEmpty.TabIndex = 12;
-			this.chkFilterNotEmpty.Text = "Not Empty";
-			this.chkFilterNotEmpty.UseVisualStyleBackColor = true;
-			// 
-			// chkFilterOnline
-			// 
-			this.chkFilterOnline.AutoSize = true;
-			this.chkFilterOnline.Location = new System.Drawing.Point(724, 1);
-			this.chkFilterOnline.Margin = new System.Windows.Forms.Padding(0);
-			this.chkFilterOnline.Name = "chkFilterOnline";
-			this.chkFilterOnline.Size = new System.Drawing.Size(56, 18);
-			this.chkFilterOnline.TabIndex = 13;
-			this.chkFilterOnline.Text = "Online";
-			this.chkFilterOnline.UseVisualStyleBackColor = true;
-			// 
-			// frmMain
+			// FrmMain
 			// 
 			this.AcceptButton = this.btnConnect;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -305,7 +306,7 @@
 			this.Controls.Add(this.pnlControls);
 			this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimumSize = new System.Drawing.Size(800, 500);
-			this.Name = "frmMain";
+			this.Name = "FrmMain";
 			this.Text = "SA-MP serverbrowser";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
 			this.pnlControls.ResumeLayout(false);
