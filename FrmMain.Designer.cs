@@ -254,7 +254,6 @@
             this.colMode,
             this.colLanguage});
 			this.lstServers.FullRowSelect = true;
-			this.lstServers.GridLines = true;
 			this.lstServers.HideSelection = false;
 			this.lstServers.Location = new System.Drawing.Point(0, 24);
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
