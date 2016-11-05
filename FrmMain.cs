@@ -24,6 +24,8 @@ namespace yugecin.sampbrowser
 			serverList = new List<ServerRow>();
 			serverMap = new Dictionary<ServerInfo, ServerRow>();
 			InitializeComponent();
+			lstServers.Height += SystemInformation.HorizontalScrollBarHeight;
+			lstServers.Columns[5].Width = SystemInformation.VirtualScreen.Width;
 			loadServersThread = new Thread( LoadServers );
 			loadServersThread.Start();
 		}

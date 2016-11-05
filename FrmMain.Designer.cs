@@ -33,13 +33,6 @@
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.btnQuickconnect = new System.Windows.Forms.Button();
 			this.btnConnect = new System.Windows.Forms.Button();
-			this.lstServers = new System.Windows.Forms.ListView();
-			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colPlayers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lblStatus = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtFilterHostname = new System.Windows.Forms.TextBox();
@@ -52,6 +45,13 @@
 			this.txtFilterLang = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtFilterMode = new System.Windows.Forms.TextBox();
+			this.lstServers = new yugecin.sampbrowser.CustomListView();
+			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colPlayers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.pnlControls.SuspendLayout();
 			this.pnlFilters.SuspendLayout();
 			this.SuspendLayout();
@@ -107,60 +107,6 @@
 			this.btnConnect.TabIndex = 1;
 			this.btnConnect.Text = "Connect";
 			this.btnConnect.UseVisualStyleBackColor = true;
-			// 
-			// lstServers
-			// 
-			this.lstServers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.lstServers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.lstServers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colPW,
-            this.colHostName,
-            this.colPlayers,
-            this.colPing,
-            this.colMode,
-            this.colLanguage});
-			this.lstServers.FullRowSelect = true;
-			this.lstServers.GridLines = true;
-			this.lstServers.HideSelection = false;
-			this.lstServers.Location = new System.Drawing.Point(0, 24);
-			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
-			this.lstServers.MultiSelect = false;
-			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(615, 404);
-			this.lstServers.TabIndex = 0;
-			this.lstServers.UseCompatibleStateImageBehavior = false;
-			this.lstServers.View = System.Windows.Forms.View.Details;
-			// 
-			// colPW
-			// 
-			this.colPW.Text = "PW";
-			this.colPW.Width = 30;
-			// 
-			// colHostName
-			// 
-			this.colHostName.Text = "HostName";
-			this.colHostName.Width = 250;
-			// 
-			// colPlayers
-			// 
-			this.colPlayers.Text = "Players";
-			// 
-			// colPing
-			// 
-			this.colPing.Text = "Ping";
-			this.colPing.Width = 40;
-			// 
-			// colMode
-			// 
-			this.colMode.Text = "Mode";
-			this.colMode.Width = 120;
-			// 
-			// colLanguage
-			// 
-			this.colLanguage.Text = "Language";
-			this.colLanguage.Width = 90;
 			// 
 			// lblStatus
 			// 
@@ -294,6 +240,60 @@
 			this.txtFilterMode.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterMode.TabIndex = 7;
 			// 
+			// lstServers
+			// 
+			this.lstServers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lstServers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lstServers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colPW,
+            this.colHostName,
+            this.colPlayers,
+            this.colPing,
+            this.colMode,
+            this.colLanguage});
+			this.lstServers.FullRowSelect = true;
+			this.lstServers.GridLines = true;
+			this.lstServers.HideSelection = false;
+			this.lstServers.Location = new System.Drawing.Point(0, 24);
+			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
+			this.lstServers.MultiSelect = false;
+			this.lstServers.Name = "lstServers";
+			this.lstServers.Size = new System.Drawing.Size(615, 404);
+			this.lstServers.TabIndex = 0;
+			this.lstServers.UseCompatibleStateImageBehavior = false;
+			this.lstServers.View = System.Windows.Forms.View.Details;
+			// 
+			// colPW
+			// 
+			this.colPW.Text = "PW";
+			this.colPW.Width = 30;
+			// 
+			// colHostName
+			// 
+			this.colHostName.Text = "HostName";
+			this.colHostName.Width = 250;
+			// 
+			// colPlayers
+			// 
+			this.colPlayers.Text = "Players";
+			// 
+			// colPing
+			// 
+			this.colPing.Text = "Ping";
+			this.colPing.Width = 40;
+			// 
+			// colMode
+			// 
+			this.colMode.Text = "Mode";
+			this.colMode.Width = 120;
+			// 
+			// colLanguage
+			// 
+			this.colLanguage.Text = "Language";
+			this.colLanguage.Width = 90;
+			// 
 			// FrmMain
 			// 
 			this.AcceptButton = this.btnConnect;
@@ -321,7 +321,6 @@
 
 		private System.Windows.Forms.Panel pnlControls;
 		private System.Windows.Forms.Label lblStatus;
-		private System.Windows.Forms.ListView lstServers;
 		private System.Windows.Forms.ColumnHeader colPW;
 		private System.Windows.Forms.ColumnHeader colHostName;
 		private System.Windows.Forms.ColumnHeader colPlayers;
@@ -343,5 +342,6 @@
 		private System.Windows.Forms.CheckBox chkFilterNotFull;
 		private System.Windows.Forms.CheckBox chlFilterNoPW;
 		private System.Windows.Forms.CheckBox chkFilterOnline;
+		private CustomListView lstServers;
 	}
 }
