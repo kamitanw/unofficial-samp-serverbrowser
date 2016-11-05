@@ -1,7 +1,6 @@
 ﻿using System.Threading;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace yugecin.sampbrowser
 {
@@ -42,7 +41,6 @@ namespace yugecin.sampbrowser
 				ListViewItem listItem = new ListViewItem( new string[6] );
 				ServerRow row = new ServerRow( info, listItem );
 				listItem.Tag = row;
-				listItem.Font = new Font( "Arial", 9f, FontStyle.Regular, GraphicsUnit.Point, 0 );
 				serverList.Add( row );
 				serverMap.Add( info, row );
 				UpdateServerRow( info );
