@@ -13,6 +13,8 @@ namespace yugecin.sampbrowser
 		private List<ServerRow> serverList;
 		private Dictionary<ServerInfo, ServerRow> serverMap;
 
+		private ImageList icons;
+
 		private int visibleServerCount;
 		private int visiblePlayerCount;
 		private int visibleFreeSlotCount;
@@ -23,9 +25,13 @@ namespace yugecin.sampbrowser
 			query = new ServerQuery();
 			serverList = new List<ServerRow>();
 			serverMap = new Dictionary<ServerInfo, ServerRow>();
+			icons = new ImageList();
+			icons.Images.Add( "pwTrue", Icons._lock );
+			icons.Images.Add( "pwFalse", Icons.lock_open );
 			InitializeComponent();
 			lstServers.Height += SystemInformation.HorizontalScrollBarHeight;
 			lstServers.Columns[5].Width = SystemInformation.VirtualScreen.Width;
+			lstServers.SmallImageList = icons;
 			loadServersThread = new Thread( LoadServers );
 			loadServersThread.Start();
 		}
@@ -75,7 +81,7 @@ namespace yugecin.sampbrowser
 			visibleServerCount -= info.wasOnline ? 1 : 0;
 			if( info.online )
 			{
-				listItem.SubItems[0].Text = info.password ? "X" : "";
+				listItem.ImageKey = "pw" + info.password;
 				listItem.SubItems[1].Text = info.hostname;
 				listItem.SubItems[2].Text = info.players + " / " + info.maxplayers;
 				listItem.SubItems[3].Text = info.ping.ToString();
@@ -87,7 +93,7 @@ namespace yugecin.sampbrowser
 			}
 			else
 			{
-				listItem.SubItems[0].Text = "";
+				//listItem.ImageKey = "pw" + true;
 				listItem.SubItems[1].Text = "(Retrieving info...) " + info.ip + ":" + info.port;
 				listItem.SubItems[2].Text = "0 / 0";
 				listItem.SubItems[3].Text = "-";

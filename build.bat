@@ -16,10 +16,16 @@ if not exist %p% (
 
 call %p%
 
+echo.
+echo resource files
+resgen.exe Icons.resx Icons.resources
+echo.
 echo cpp
 cl.exe /Zi /MD /c ulauncher.cpp
 cl.exe /Zi /clr /c mlauncher.cpp
 echo.
+echo icons
+csc /target:module %~2 Icons.Designer.cs
 echo structs
 csc /target:module %~2 ServerInfo.cs
 csc /target:module %~2 /addmodule:ServerInfo.netmodule ServerRow.cs
@@ -32,11 +38,11 @@ csc /target:module %~2 /addmodule:ServerInfo.netmodule serverproviders/IServerPr
 csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule serverproviders/TestServerProvider.cs
 csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule serverproviders/GameStateServerProvider.cs
 echo frmmain
-csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule FrmMain.cs FrmMain.Designer.cs
+csc /target:module %~2 /addmodule:Icons.Designer.netmodule /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule FrmMain.cs FrmMain.Designer.cs
 echo loader
 csc /target:module %~2 /addmodule:FrmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER Loader.cs
 echo.
 echo - linking
-link Advapi32.lib user32.lib mlauncher.obj ulauncher.obj ServerInfo.netmodule ServerRow.netmodule IServerProvider.netmodule TestServerProvider.netmodule GameStateServerProvider.netmodule ServerQuery.netmodule CustomListView.netmodule frmMain.netmodule Loader.netmodule /entry:yugecin.sampbrowser.Loader.Main /subsystem:%subsystem% /out:sampbrowser.exe /ltcg
+link Advapi32.lib user32.lib mlauncher.obj ulauncher.obj Icons.Designer.netmodule ServerInfo.netmodule ServerRow.netmodule IServerProvider.netmodule TestServerProvider.netmodule GameStateServerProvider.netmodule ServerQuery.netmodule CustomListView.netmodule frmMain.netmodule Loader.netmodule /entry:yugecin.sampbrowser.Loader.Main /subsystem:%subsystem% /out:sampbrowser.exe /ltcg /assemblyresource:Icons.resources,yugecin.sampbrowser.Icons.resources
 
 pause
