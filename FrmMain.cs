@@ -46,6 +46,10 @@ namespace yugecin.sampbrowser
 				UpdateServerRow( info );
 
 				lstServers.Items.Add( listItem );
+				if( lstServers.Items.Count % 2 == 1 )
+				{
+					listItem.BackColor = System.Drawing.Color.FromArgb( 239, 239, 239 );
+				}
 
 				query.LoadInitial( info );
 				if( info.online )
