@@ -30,7 +30,7 @@ namespace yugecin.sampbrowser
 			serverMap = new Dictionary<ServerInfo, ServerRow>();
 			icons = new ImageList();
 			icons.Images.Add( "pw", Icons.lock_neutral );
-			icons.Images.Add( "pwTrue", Icons._lock );
+			icons.Images.Add( "pwTrue", Icons.lock_closed );
 			icons.Images.Add( "pwFalse", Icons.lock_open );
 			blackpen = new Pen( new SolidBrush( Color.Black ) );
 			InitializeComponent();
