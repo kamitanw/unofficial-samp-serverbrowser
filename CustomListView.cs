@@ -13,7 +13,6 @@ namespace yugecin.sampbrowser
 		[DllImport("user32.dll")]
 		private static extern long SetWindowLong( IntPtr hWnd, int nIndex, long dwNewLong );
 
-		private const int SB_VERT = 1;
 		private const int GWL_STYLE = -16;
 
 		private const long WS_HSCROLL = 0x00100000L;
