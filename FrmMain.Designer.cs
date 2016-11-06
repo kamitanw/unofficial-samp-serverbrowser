@@ -46,6 +46,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtFilterMode = new System.Windows.Forms.TextBox();
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.lstServers = new yugecin.sampbrowser.CustomListView();
 			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,7 +54,6 @@
 			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.pnlControls.SuspendLayout();
 			this.pnlFilters.SuspendLayout();
 			this.pnlContent.SuspendLayout();
@@ -115,10 +115,10 @@
 			// 
 			this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.lblStatus.Location = new System.Drawing.Point(0, 448);
+			this.lblStatus.Location = new System.Drawing.Point(0, 453);
 			this.lblStatus.Margin = new System.Windows.Forms.Padding(0);
 			this.lblStatus.Name = "lblStatus";
-			this.lblStatus.Size = new System.Drawing.Size(792, 25);
+			this.lblStatus.Size = new System.Drawing.Size(792, 20);
 			this.lblStatus.TabIndex = 2;
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
@@ -155,7 +155,7 @@
 			this.pnlFilters.Controls.Add(this.txtFilterMode);
 			this.pnlFilters.Controls.Add(this.label2);
 			this.pnlFilters.Controls.Add(this.txtFilterHostname);
-			this.pnlFilters.Location = new System.Drawing.Point(0, 422);
+			this.pnlFilters.Location = new System.Drawing.Point(0, 427);
 			this.pnlFilters.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlFilters.Name = "pnlFilters";
 			this.pnlFilters.Size = new System.Drawing.Size(792, 26);
@@ -254,9 +254,17 @@
 			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-			this.pnlContent.Size = new System.Drawing.Size(792, 398);
+			this.pnlContent.Size = new System.Drawing.Size(792, 403);
 			this.pnlContent.TabIndex = 4;
 			this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
+			// 
+			// customSplitter1
+			// 
+			this.customSplitter1.Location = new System.Drawing.Point(603, 1);
+			this.customSplitter1.Name = "customSplitter1";
+			this.customSplitter1.Size = new System.Drawing.Size(10, 402);
+			this.customSplitter1.TabIndex = 1;
+			this.customSplitter1.TabStop = false;
 			// 
 			// lstServers
 			// 
@@ -275,7 +283,7 @@
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(603, 397);
+			this.lstServers.Size = new System.Drawing.Size(603, 402);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -308,14 +316,6 @@
 			// 
 			this.colLanguage.Text = "Language";
 			this.colLanguage.Width = 90;
-			// 
-			// customSplitter1
-			// 
-			this.customSplitter1.Location = new System.Drawing.Point(603, 1);
-			this.customSplitter1.Name = "customSplitter1";
-			this.customSplitter1.Size = new System.Drawing.Size(10, 397);
-			this.customSplitter1.TabIndex = 1;
-			this.customSplitter1.TabStop = false;
 			// 
 			// FrmMain
 			// 
