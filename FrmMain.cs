@@ -121,9 +121,9 @@ namespace yugecin.sampbrowser
 			}
 		}
 
-		private void pnlContent_Paint( object sender, PaintEventArgs e )
+		private void pnlControls_Paint( object sender, PaintEventArgs e )
 		{
-			e.Graphics.DrawLine( blackpen, new Point( 0, 0 ), new Point( pnlControls.Width - 1, 0 ) );
+			e.Graphics.DrawLine( blackpen, new Point( 0, 24 ), new Point( pnlControls.Width - 1, 24 ) );
 		}
 
 	}

@@ -69,8 +69,9 @@
 			this.pnlControls.Location = new System.Drawing.Point(0, 0);
 			this.pnlControls.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlControls.Name = "pnlControls";
-			this.pnlControls.Size = new System.Drawing.Size(792, 24);
+			this.pnlControls.Size = new System.Drawing.Size(792, 25);
 			this.pnlControls.TabIndex = 0;
+			this.pnlControls.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlControls_Paint);
 			// 
 			// label5
 			// 
@@ -250,17 +251,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlContent.Controls.Add(this.customSplitter1);
 			this.pnlContent.Controls.Add(this.lstServers);
-			this.pnlContent.Location = new System.Drawing.Point(0, 24);
+			this.pnlContent.Location = new System.Drawing.Point(0, 25);
 			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlContent.Name = "pnlContent";
-			this.pnlContent.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-			this.pnlContent.Size = new System.Drawing.Size(792, 403);
+			this.pnlContent.Size = new System.Drawing.Size(792, 402);
 			this.pnlContent.TabIndex = 4;
-			this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
 			// 
 			// customSplitter1
 			// 
-			this.customSplitter1.Location = new System.Drawing.Point(603, 1);
+			this.customSplitter1.Location = new System.Drawing.Point(603, 0);
 			this.customSplitter1.Name = "customSplitter1";
 			this.customSplitter1.Size = new System.Drawing.Size(10, 402);
 			this.customSplitter1.TabIndex = 1;
@@ -279,7 +278,7 @@
 			this.lstServers.Dock = System.Windows.Forms.DockStyle.Left;
 			this.lstServers.FullRowSelect = true;
 			this.lstServers.HideSelection = false;
-			this.lstServers.Location = new System.Drawing.Point(0, 1);
+			this.lstServers.Location = new System.Drawing.Point(0, 0);
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
