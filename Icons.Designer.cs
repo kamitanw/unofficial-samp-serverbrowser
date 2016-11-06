@@ -73,6 +73,16 @@ namespace yugecin.sampbrowser {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lock_neutral {
+            get {
+                object obj = ResourceManager.GetObject("lock_neutral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_open {
             get {
                 object obj = ResourceManager.GetObject("lock_open", resourceCulture);
