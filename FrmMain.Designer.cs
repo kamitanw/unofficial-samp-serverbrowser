@@ -53,6 +53,7 @@
 			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.pnlControls.SuspendLayout();
 			this.pnlFilters.SuspendLayout();
 			this.pnlContent.SuspendLayout();
@@ -247,6 +248,7 @@
 			this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlContent.Controls.Add(this.customSplitter1);
 			this.pnlContent.Controls.Add(this.lstServers);
 			this.pnlContent.Location = new System.Drawing.Point(0, 24);
 			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
@@ -307,6 +309,14 @@
 			this.colLanguage.Text = "Language";
 			this.colLanguage.Width = 90;
 			// 
+			// customSplitter1
+			// 
+			this.customSplitter1.Location = new System.Drawing.Point(603, 1);
+			this.customSplitter1.Name = "customSplitter1";
+			this.customSplitter1.Size = new System.Drawing.Size(10, 397);
+			this.customSplitter1.TabIndex = 1;
+			this.customSplitter1.TabStop = false;
+			// 
 			// FrmMain
 			// 
 			this.AcceptButton = this.btnConnect;
@@ -358,5 +368,6 @@
 		private System.Windows.Forms.ColumnHeader colPing;
 		private System.Windows.Forms.ColumnHeader colMode;
 		private System.Windows.Forms.ColumnHeader colLanguage;
+		private CustomSplitter customSplitter1;
 	}
 }
