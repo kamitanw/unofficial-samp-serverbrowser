@@ -71,10 +71,10 @@
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(161, 1);
-			this.label5.Margin = new System.Windows.Forms.Padding(0);
+			this.label5.Location = new System.Drawing.Point(161, 2);
+			this.label5.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(77, 23);
+			this.label5.Size = new System.Drawing.Size(77, 20);
 			this.label5.TabIndex = 10;
 			this.label5.Text = "Name";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,8 +82,8 @@
 			// txtName
 			// 
 			this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtName.Location = new System.Drawing.Point(238, 3);
-			this.txtName.Margin = new System.Windows.Forms.Padding(0);
+			this.txtName.Location = new System.Drawing.Point(238, 2);
+			this.txtName.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.txtName.Name = "txtName";
 			this.txtName.Size = new System.Drawing.Size(150, 20);
 			this.txtName.TabIndex = 11;
@@ -121,8 +121,8 @@
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(0, -1);
-			this.label2.Margin = new System.Windows.Forms.Padding(0);
+			this.label2.Location = new System.Drawing.Point(0, 3);
+			this.label2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(60, 20);
 			this.label2.TabIndex = 3;
@@ -132,8 +132,8 @@
 			// txtFilterHostname
 			// 
 			this.txtFilterHostname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtFilterHostname.Location = new System.Drawing.Point(60, 0);
-			this.txtFilterHostname.Margin = new System.Windows.Forms.Padding(0);
+			this.txtFilterHostname.Location = new System.Drawing.Point(60, 4);
+			this.txtFilterHostname.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.txtFilterHostname.Name = "txtFilterHostname";
 			this.txtFilterHostname.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterHostname.TabIndex = 4;
@@ -152,17 +152,17 @@
 			this.pnlFilters.Controls.Add(this.txtFilterMode);
 			this.pnlFilters.Controls.Add(this.label2);
 			this.pnlFilters.Controls.Add(this.txtFilterHostname);
-			this.pnlFilters.Location = new System.Drawing.Point(0, 428);
+			this.pnlFilters.Location = new System.Drawing.Point(0, 422);
 			this.pnlFilters.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlFilters.Name = "pnlFilters";
-			this.pnlFilters.Size = new System.Drawing.Size(792, 20);
+			this.pnlFilters.Size = new System.Drawing.Size(792, 26);
 			this.pnlFilters.TabIndex = 3;
 			// 
 			// chkFilterOnline
 			// 
 			this.chkFilterOnline.AutoSize = true;
-			this.chkFilterOnline.Location = new System.Drawing.Point(724, 1);
-			this.chkFilterOnline.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterOnline.Location = new System.Drawing.Point(724, 5);
+			this.chkFilterOnline.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.chkFilterOnline.Name = "chkFilterOnline";
 			this.chkFilterOnline.Size = new System.Drawing.Size(56, 18);
 			this.chkFilterOnline.TabIndex = 13;
@@ -172,8 +172,8 @@
 			// chkFilterNotEmpty
 			// 
 			this.chkFilterNotEmpty.AutoSize = true;
-			this.chkFilterNotEmpty.Location = new System.Drawing.Point(650, 1);
-			this.chkFilterNotEmpty.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterNotEmpty.Location = new System.Drawing.Point(650, 5);
+			this.chkFilterNotEmpty.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.chkFilterNotEmpty.Name = "chkFilterNotEmpty";
 			this.chkFilterNotEmpty.Size = new System.Drawing.Size(74, 18);
 			this.chkFilterNotEmpty.TabIndex = 12;
@@ -183,8 +183,8 @@
 			// chkFilterNotFull
 			// 
 			this.chkFilterNotFull.AutoSize = true;
-			this.chkFilterNotFull.Location = new System.Drawing.Point(589, 1);
-			this.chkFilterNotFull.Margin = new System.Windows.Forms.Padding(0);
+			this.chkFilterNotFull.Location = new System.Drawing.Point(589, 5);
+			this.chkFilterNotFull.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.chkFilterNotFull.Name = "chkFilterNotFull";
 			this.chkFilterNotFull.Size = new System.Drawing.Size(61, 18);
 			this.chkFilterNotFull.TabIndex = 11;
@@ -194,8 +194,8 @@
 			// chlFilterNoPW
 			// 
 			this.chlFilterNoPW.AutoSize = true;
-			this.chlFilterNoPW.Location = new System.Drawing.Point(531, 1);
-			this.chlFilterNoPW.Margin = new System.Windows.Forms.Padding(0);
+			this.chlFilterNoPW.Location = new System.Drawing.Point(531, 5);
+			this.chlFilterNoPW.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.chlFilterNoPW.Name = "chlFilterNoPW";
 			this.chlFilterNoPW.Size = new System.Drawing.Size(58, 18);
 			this.chlFilterNoPW.TabIndex = 10;
@@ -204,8 +204,8 @@
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(346, -1);
-			this.label4.Margin = new System.Windows.Forms.Padding(0);
+			this.label4.Location = new System.Drawing.Point(346, 3);
+			this.label4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(60, 20);
 			this.label4.TabIndex = 8;
@@ -215,16 +215,16 @@
 			// txtFilterLang
 			// 
 			this.txtFilterLang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtFilterLang.Location = new System.Drawing.Point(406, 0);
-			this.txtFilterLang.Margin = new System.Windows.Forms.Padding(0);
+			this.txtFilterLang.Location = new System.Drawing.Point(406, 4);
+			this.txtFilterLang.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.txtFilterLang.Name = "txtFilterLang";
 			this.txtFilterLang.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterLang.TabIndex = 9;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(173, -1);
-			this.label3.Margin = new System.Windows.Forms.Padding(0);
+			this.label3.Location = new System.Drawing.Point(173, 3);
+			this.label3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(60, 20);
 			this.label3.TabIndex = 6;
@@ -234,8 +234,8 @@
 			// txtFilterMode
 			// 
 			this.txtFilterMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtFilterMode.Location = new System.Drawing.Point(233, 0);
-			this.txtFilterMode.Margin = new System.Windows.Forms.Padding(0);
+			this.txtFilterMode.Location = new System.Drawing.Point(233, 4);
+			this.txtFilterMode.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.txtFilterMode.Name = "txtFilterMode";
 			this.txtFilterMode.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterMode.TabIndex = 7;
@@ -259,7 +259,7 @@
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(615, 404);
+			this.lstServers.Size = new System.Drawing.Size(615, 399);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
