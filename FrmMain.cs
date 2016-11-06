@@ -33,7 +33,6 @@ namespace yugecin.sampbrowser
 			icons.Images.Add( "pwFalse", Icons.lock_open );
 			blackpen = new Pen( new SolidBrush( Color.Black ) );
 			InitializeComponent();
-			lstServers.Height += SystemInformation.HorizontalScrollBarHeight;
 			lstServers.Columns[5].Width = SystemInformation.VirtualScreen.Width;
 			lstServers.SmallImageList = icons;
 			loadServersThread = new Thread( LoadServers );

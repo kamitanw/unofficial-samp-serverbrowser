@@ -8,21 +8,42 @@ namespace yugecin.sampbrowser
 	{
 
 		[DllImport("user32.dll")]
-		private static extern int GetWindowLong( IntPtr hWnd, int nIndex );
+		private static extern long GetWindowLong( IntPtr hWnd, int nIndex );
 
-		//[DllImport("user32.dll")]
-		//private static extern long ShowScrollBar(IntPtr hWnd, int wBar, int bShow);
+		[DllImport("user32.dll")]
+		private static extern long SetWindowLong( IntPtr hWnd, int nIndex, long dwNewLong );
+
+		private const int SB_VERT = 1;
+		private const int GWL_STYLE = -16;
+
+		private const long WS_HSCROLL = 0x00100000L;
+		private const long WS_VSCROLL = 0x00200000L;
+
+		private const int WM_STYLECHANGING = 0x7C;
+		private const int WM_STYLECHANGED = 0x7D;
+		private const int WM_MOUSEWHEEL = 0x20A;
+		private const int WM_MOUSEHWHEEL = 0x20E;
 
 		protected override void WndProc( ref Message msg )
 		{
-			//ShowScrollBar( this.Handle, 0, 0 ); // hide it by enlarging the height instead (see FrmMain.cs constructor)
-			if( msg.Msg == 0x20E ) // WM_MOUSEHWHEEL
+			if( msg.Msg == WM_STYLECHANGED || msg.Msg == WM_STYLECHANGING )
+			{
+				base.WndProc( ref msg );
+				return;
+			}
+			long windowLong = GetWindowLong( this.Handle, GWL_STYLE ); 
+			if( ( windowLong & WS_HSCROLL ) > 0 )
+			{
+				windowLong &= ~WS_HSCROLL;
+				SetWindowLong( this.Handle, GWL_STYLE, windowLong );
+			}
+			if( msg.Msg == WM_MOUSEHWHEEL )
 			{
 				return;
 			}
-			if( msg.Msg == 0x20A ) // WM_MOUSEWHEEL 
+			if( msg.Msg == WM_MOUSEWHEEL )
 			{
-				if( ( GetWindowLong( this.Handle, -16 ) & 0x200000 ) == 0 ) // doesn't have vscrollbar
+				if( ( windowLong & WS_VSCROLL ) == 0 )
 				{
 					return;
 				}
