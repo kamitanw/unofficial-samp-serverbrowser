@@ -45,6 +45,7 @@
 			this.txtFilterLang = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtFilterMode = new System.Windows.Forms.TextBox();
+			this.pnlContent = new System.Windows.Forms.Panel();
 			this.lstServers = new yugecin.sampbrowser.CustomListView();
 			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,6 +55,7 @@
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.pnlControls.SuspendLayout();
 			this.pnlFilters.SuspendLayout();
+			this.pnlContent.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlControls
@@ -240,11 +242,22 @@
 			this.txtFilterMode.Size = new System.Drawing.Size(113, 20);
 			this.txtFilterMode.TabIndex = 7;
 			// 
-			// lstServers
+			// pnlContent
 			// 
-			this.lstServers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlContent.Controls.Add(this.lstServers);
+			this.pnlContent.Location = new System.Drawing.Point(0, 24);
+			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
+			this.pnlContent.Name = "pnlContent";
+			this.pnlContent.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+			this.pnlContent.Size = new System.Drawing.Size(792, 398);
+			this.pnlContent.TabIndex = 4;
+			this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
+			// 
+			// lstServers
+			// 
 			this.lstServers.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.lstServers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colPW,
@@ -253,13 +266,14 @@
             this.colPing,
             this.colMode,
             this.colLanguage});
+			this.lstServers.Dock = System.Windows.Forms.DockStyle.Left;
 			this.lstServers.FullRowSelect = true;
 			this.lstServers.HideSelection = false;
-			this.lstServers.Location = new System.Drawing.Point(0, 24);
+			this.lstServers.Location = new System.Drawing.Point(0, 1);
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(615, 399);
+			this.lstServers.Size = new System.Drawing.Size(603, 397);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -299,9 +313,9 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(792, 473);
+			this.Controls.Add(this.pnlContent);
 			this.Controls.Add(this.pnlFilters);
 			this.Controls.Add(this.lblStatus);
-			this.Controls.Add(this.lstServers);
 			this.Controls.Add(this.pnlControls);
 			this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimumSize = new System.Drawing.Size(800, 500);
@@ -312,6 +326,7 @@
 			this.pnlControls.PerformLayout();
 			this.pnlFilters.ResumeLayout(false);
 			this.pnlFilters.PerformLayout();
+			this.pnlContent.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -320,12 +335,6 @@
 
 		private System.Windows.Forms.Panel pnlControls;
 		private System.Windows.Forms.Label lblStatus;
-		private System.Windows.Forms.ColumnHeader colPW;
-		private System.Windows.Forms.ColumnHeader colHostName;
-		private System.Windows.Forms.ColumnHeader colPlayers;
-		private System.Windows.Forms.ColumnHeader colPing;
-		private System.Windows.Forms.ColumnHeader colMode;
-		private System.Windows.Forms.ColumnHeader colLanguage;
 		private System.Windows.Forms.Button btnQuickconnect;
 		private System.Windows.Forms.Button btnConnect;
 		private System.Windows.Forms.Label label2;
@@ -341,6 +350,13 @@
 		private System.Windows.Forms.CheckBox chkFilterNotFull;
 		private System.Windows.Forms.CheckBox chlFilterNoPW;
 		private System.Windows.Forms.CheckBox chkFilterOnline;
+		private System.Windows.Forms.Panel pnlContent;
 		private CustomListView lstServers;
+		private System.Windows.Forms.ColumnHeader colPW;
+		private System.Windows.Forms.ColumnHeader colHostName;
+		private System.Windows.Forms.ColumnHeader colPlayers;
+		private System.Windows.Forms.ColumnHeader colPing;
+		private System.Windows.Forms.ColumnHeader colMode;
+		private System.Windows.Forms.ColumnHeader colLanguage;
 	}
 }

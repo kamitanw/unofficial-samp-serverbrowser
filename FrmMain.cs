@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace yugecin.sampbrowser
 {
@@ -15,6 +16,8 @@ namespace yugecin.sampbrowser
 
 		private ImageList icons;
 
+		private Pen blackpen;
+
 		private int visibleServerCount;
 		private int visiblePlayerCount;
 		private int visibleFreeSlotCount;
@@ -28,6 +31,7 @@ namespace yugecin.sampbrowser
 			icons = new ImageList();
 			icons.Images.Add( "pwTrue", Icons._lock );
 			icons.Images.Add( "pwFalse", Icons.lock_open );
+			blackpen = new Pen( new SolidBrush( Color.Black ) );
 			InitializeComponent();
 			lstServers.Height += SystemInformation.HorizontalScrollBarHeight;
 			lstServers.Columns[5].Width = SystemInformation.VirtualScreen.Width;
@@ -114,6 +118,11 @@ namespace yugecin.sampbrowser
 				loadServersThread.Join();
 				// TODO: kill the socket or sth
 			}
+		}
+
+		private void pnlContent_Paint( object sender, PaintEventArgs e )
+		{
+			e.Graphics.DrawLine( blackpen, new Point( 0, 0 ), new Point( pnlControls.Width - 1, 0 ) );
 		}
 
 	}
