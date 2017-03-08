@@ -9,7 +9,8 @@ Run <kbd>build.bat</kbd> (you may want to adjust some paths inside it first)
 Opening with VS should work, but I can't make it compile everything together so it won't start the game when running it through VS.
 
 ### Credits
-The original cpp code to inject samp.dll into gtasa was written by @Whitetigerswt ([samp_launcher](https://github.com/Whitetigerswt/samp_launcher))
+The original cpp code to inject samp.dll into gtasa was written by @Whitetigerswt ([samp_launcher](https://github.com/Whitetigerswt/samp_launcher))  
+Lock icon originally from the [famfamfam silk icon set](http://www.famfamfam.com/lab/icons/silk)
 
 ### License
 [MIT](LICENSE)
