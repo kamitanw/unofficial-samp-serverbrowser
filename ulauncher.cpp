@@ -5,6 +5,25 @@
 void ULauncher::Launch()
 {
 	printf("launching\n");
+
+	// Get the module handle to kernal32.dll
+	HMODULE hMod = GetModuleHandle("kernel32.dll");
+
+	if (!hMod)
+	{
+		MessageBoxA(NULL, "Could not find kernel32.dll", "SA:MP Launcher", MB_ICONERROR);
+		return;
+	}
+	
+	// Create address variable to hold the address of the LoadLibrary function.
+	void* addr = (void*)GetProcAddress(hMod, "LoadLibraryA");
+
+	if (addr == NULL)
+	{
+		MessageBoxA(NULL, "Could not find the address of LoadLibraryA", "SA:MP Launcher", MB_ICONERROR);
+		return;
+	}
+
 	// Prepare to create a new process.
 	PROCESS_INFORMATION ProcessInfo;
 	STARTUPINFO StartupInfo;
@@ -52,7 +71,7 @@ void ULauncher::Launch()
 
 	if (dwRet != ERROR_SUCCESS)
 	{
-		MessageBoxA(NULL, "could not get name", "SA:MP Launcher", MB_ICONERROR);
+		MessageBoxA(NULL, "could not get player name", "SA:MP Launcher", MB_ICONERROR);
 		return;
 	}
 
@@ -71,66 +90,32 @@ void ULauncher::Launch()
 	char szWithSampdll[256] = "";
 	sprintf_s(szWithSampdll, sizeof(szWithSampdll), "%s\\samp.dll", path);
 
-	// Get the module handle to kernal32.dll
-	HMODULE hMod = GetModuleHandle("kernel32.dll");
-
-	// Create address variable to hold the address of the LoadLibrary function.
-	void* addr = NULL;
-
-	// If it was a valid handle.
-	if (hMod)
-		// Get the address of the LoadLibrary function so we can load samp.dll
-		addr = (void*)GetProcAddress(hMod, "LoadLibraryA");
-	else
-	{
-		MessageBoxA(NULL, "Could not find kernel32.dll", "SA:MP Launcher", MB_ICONERROR);
-		return;
-	}
-
 	// Allocate memory in the new process we just created to store the string of the samp.dll file path.
 	void* arg = (void*)VirtualAllocEx(ProcessInfo.hProcess, NULL, strlen(szWithSampdll), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
 	
-	// Make sure the space was allocated.
-	if (arg != NULL)
-		// Write to the memory we just allocated the file path to samp.dll including directory.
-		WriteProcessMemory(ProcessInfo.hProcess, arg, szWithSampdll, strlen(szWithSampdll), NULL);
-	else
+	if (arg == NULL)
 	{
-		// arg is null, and we can't continue then.
-		// Let the user know there was a problem and exit.
-		MessageBoxA(NULL, "Memory could not be allocated to inject samp.dll", "SA:MP Launcher", MB_ICONERROR);
+		MessageBoxA(NULL, "Memory could not be allocated to inject samp.dll. If you run the game as admin, you should run this launcher as admin too", "SA:MP Launcher", MB_ICONERROR);
 		return;
 	}
 
-	// Create new handle to our remote thread.
-	HANDLE id = NULL;
+	// Write to the memory we just allocated the file path to samp.dll including directory.
+	WriteProcessMemory(ProcessInfo.hProcess, arg, szWithSampdll, strlen(szWithSampdll), NULL);
 
-	// Make sure The address of LoadLibrary isn't NULL
-	if (addr != NULL)
-	{
-		// Create a remote thread that calls LoadLibrary, and as the parameter, the memory location we just wrote the samp.dll path to.
-		// also don't execute this thread, but just create.
-		id = CreateRemoteThread(ProcessInfo.hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)addr, arg, CREATE_SUSPENDED, NULL);
-	}
-	else
-	{
-		MessageBoxA(NULL, "Could not find the address of LoadLibraryA", "SA:MP Launcher", MB_ICONERROR);
-		return;
-	}
+	// Create a remote thread that calls LoadLibrary, and as the parameter, the memory location we just wrote the samp.dll path to.
+	// also don't execute this thread, but just create.
+	HANDLE id = CreateRemoteThread(ProcessInfo.hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)addr, arg, CREATE_SUSPENDED, NULL);
 
-	// Make sure id is a valid handle
-	if (id)
-	{
-		// Resume the remote thread.
-		ResumeThread(id);
-		// Wait for the remote thread to finish executing.
-		WaitForSingleObject(id, INFINITE);
-	}
-	else
+	if (!id)
 	{
 		MessageBoxA(NULL, "the ID returned from CreateRemoteThread was invalid.", "SA:MP Launcher", MB_ICONERROR);
 		return;
 	}
+
+	// Resume the remote thread.
+	ResumeThread(id);
+	// Wait for the remote thread to finish executing.
+	WaitForSingleObject(id, INFINITE);
 
 	// Free the memory we just allocated that stores the samp.dll file path since LoadLibrary has been called and it's not needed anymore.
 	VirtualFreeEx(ProcessInfo.hProcess, arg, 0, MEM_RELEASE);
