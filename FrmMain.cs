@@ -22,6 +22,10 @@ namespace yugecin.sampbrowser
 		private int visiblePlayerCount;
 		private int visibleFreeSlotCount;
 
+#if WITHLAUNCHER
+		private MLauncher launcher;
+#endif
+
 		public FrmMain( IServerProvider serverprovider )
 		{
 			this.serverprovider = serverprovider;
@@ -34,6 +38,11 @@ namespace yugecin.sampbrowser
 			icons.Images.Add( "pwFalse", Icons.lock_open );
 			blackpen = new Pen( new SolidBrush( Color.Black ) );
 			InitializeComponent();
+			
+#if WITHLAUNCHER
+			launcher = new MLauncher();
+			txtName.Text = launcher.GetName();
+#endif
 			lstServers.Columns[0].ImageKey = "pw";
 			lstServers.Columns[5].Width = SystemInformation.VirtualScreen.Width;
 			lstServers.SmallImageList = icons;

@@ -2,12 +2,9 @@
 #define ULAUNCHER
 
 #include <stdio.h>
+#include <windows.h>
 
-class ULauncher
-{
-public:
-	void Launch();
-
-};
+void launch();
+void getname(char* buffer, DWORD bufsize);
 
 #endif

@@ -1,43 +1,22 @@
 ﻿#include "ulauncher.h"
 #using <mscorlib.dll>
+#using <System.dll>
+#using <System.Windows.Forms.dll>
 using namespace System;
 
 ref class MLauncher
 {
 public:
-	MLauncher()
-	{
-		ulauncher = new ULauncher();
-		if (!ulauncher) {
-			throw gcnew OutOfMemoryException();
-		}
-	}
-
-	~MLauncher()
-	{
-		Destruct();
-	}
-
-	!MLauncher()
-	{
-		Destruct();
-	}
 
 	void Launch()
 	{
-		if (ulauncher) {
-			ulauncher->Launch();
-		}
+		launch();
 	}
 
-private:
-	ULauncher *ulauncher;
-
-	void Destruct()
-	{
-		if (ulauncher) {
-			delete ulauncher;
-		}
+	System::String ^GetName() {
+		char buffer[24];
+		getname(buffer, sizeof(buffer));
+		return gcnew System::String(buffer);
 	}
 
 };

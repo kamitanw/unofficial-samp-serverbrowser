@@ -2,7 +2,20 @@
 
 #include <windows.h>
 
-void ULauncher::Launch()
+void getname(char* buffer, DWORD bufsize)
+{
+	HKEY hKey;
+	if (RegOpenKeyEx(HKEY_CURRENT_USER, "Software\\SAMP", 0, KEY_READ, &hKey) != ERROR_SUCCESS) {
+		return;
+	}
+	if (RegQueryValueEx(hKey, "PlayerName", NULL, NULL, (LPBYTE)buffer, &bufsize) != ERROR_SUCCESS)
+	{
+		MessageBoxA(NULL, "Could not get the location of your GTA:SA installation. Is SA-MP installed correctly?", "SA:MP Launcher", MB_ICONERROR);
+	}
+	RegCloseKey(hKey);
+}
+
+void launch()
 {
 	printf("launching\n");
 
@@ -78,6 +91,7 @@ void ULauncher::Launch()
 	// Construct it all in one command line string.
 	char commandLine[128];
 	sprintf_s(commandLine, sizeof(commandLine), "-c -h %s -p %d -n %s", ip, port, name);
+	printf("name %s", name);
 
 	// Create a new process, but don't let it run yet, it's suspended.
 	if (!CreateProcess(exeLocation, commandLine, NULL, NULL, FALSE, DETACHED_PROCESS | CREATE_SUSPENDED, NULL, path, &StartupInfo, &ProcessInfo))

@@ -51,10 +51,10 @@ if %errorlevel% neq 0 (pause & exit)
 csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule serverproviders/GameStateServerProvider.cs
 if %errorlevel% neq 0 (pause & exit)
 echo frmmain
-csc /target:module %~2 /addmodule:Icons.Designer.netmodule /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule /addmodule:CustomSplitter.netmodule FrmMain.cs FrmMain.Designer.cs
+csc /target:module %~2 /addmodule:Icons.Designer.netmodule /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule /addmodule:CustomSplitter.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs
 if %errorlevel% neq 0 (pause & exit)
 echo loader
-csc /target:module %~2 /addmodule:FrmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER Loader.cs
+csc /target:module %~2 /addmodule:FrmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule Loader.cs
 if %errorlevel% neq 0 (pause & exit)
 echo.
 echo - linking
