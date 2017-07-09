@@ -48,6 +48,10 @@ namespace yugecin.sampbrowser
 			lstServers.SmallImageList = icons;
 			loadServersThread = new Thread( LoadServers );
 			loadServersThread.Start();
+
+			tabPane.AddTab( "Favorites" );
+			tabPane.AddTab( "Internet" );
+			tabPane.AddTab( "Hosted" );
 		}
 
 		private void LoadServers()

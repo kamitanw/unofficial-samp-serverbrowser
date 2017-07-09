@@ -36,6 +36,7 @@
 			this.lblStatus = new System.Windows.Forms.Label();
 			this.pnlContent = new System.Windows.Forms.Panel();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.tabPane = new yugecin.sampbrowser.TabPane();
 			this.pnlInfo = new yugecin.sampbrowser.InfoPanel();
 			this.pingPanel1 = new yugecin.sampbrowser.PingPanel();
 			this.lblInfoLanguage = new System.Windows.Forms.Label();
@@ -159,7 +160,7 @@
 			this.pnlContent.Location = new System.Drawing.Point(0, 25);
 			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlContent.Name = "pnlContent";
-			this.pnlContent.Size = new System.Drawing.Size(832, 360);
+			this.pnlContent.Size = new System.Drawing.Size(832, 403);
 			this.pnlContent.TabIndex = 4;
 			// 
 			// linkLabel1
@@ -167,7 +168,7 @@
 			this.linkLabel1.BackColor = System.Drawing.SystemColors.Window;
 			this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.linkLabel1.Location = new System.Drawing.Point(613, 346);
+			this.linkLabel1.Location = new System.Drawing.Point(613, 389);
 			this.linkLabel1.Name = "linkLabel1";
 			this.linkLabel1.Size = new System.Drawing.Size(219, 14);
 			this.linkLabel1.TabIndex = 2;
@@ -175,8 +176,20 @@
 			this.linkLabel1.Text = "linkLabel1";
 			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
+			// tabPane
+			// 
+			this.tabPane.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tabPane.Location = new System.Drawing.Point(0, 530);
+			this.tabPane.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+			this.tabPane.Name = "tabPane";
+			this.tabPane.Size = new System.Drawing.Size(832, 20);
+			this.tabPane.TabIndex = 6;
+			// 
 			// pnlInfo
 			// 
+			this.pnlInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlInfo.Controls.Add(this.pingPanel1);
 			this.pnlInfo.Controls.Add(this.lblInfoLanguage);
 			this.pnlInfo.Controls.Add(this.lblInfoMode);
@@ -197,13 +210,16 @@
 			this.pnlInfo.Controls.Add(this.chkFilterNotFull);
 			this.pnlInfo.Controls.Add(this.label3);
 			this.pnlInfo.Controls.Add(this.chlFilterNoPW);
-			this.pnlInfo.Location = new System.Drawing.Point(0, 450);
+			this.pnlInfo.Location = new System.Drawing.Point(0, 430);
+			this.pnlInfo.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
 			this.pnlInfo.Name = "pnlInfo";
 			this.pnlInfo.Size = new System.Drawing.Size(832, 100);
 			this.pnlInfo.TabIndex = 5;
 			// 
 			// pingPanel1
 			// 
+			this.pingPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pingPanel1.Font = new System.Drawing.Font("Arial", 8.25F);
 			this.pingPanel1.Location = new System.Drawing.Point(500, 23);
 			this.pingPanel1.Margin = new System.Windows.Forms.Padding(3, 23, 23, 3);
@@ -458,7 +474,7 @@
 			this.customListView2.Location = new System.Drawing.Point(613, 0);
 			this.customListView2.MultiSelect = false;
 			this.customListView2.Name = "customListView2";
-			this.customListView2.Size = new System.Drawing.Size(219, 239);
+			this.customListView2.Size = new System.Drawing.Size(219, 282);
 			this.customListView2.TabIndex = 5;
 			this.customListView2.UseCompatibleStateImageBehavior = false;
 			this.customListView2.View = System.Windows.Forms.View.Details;
@@ -476,7 +492,7 @@
 			// customSplitter2
 			// 
 			this.customSplitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.customSplitter2.Location = new System.Drawing.Point(613, 239);
+			this.customSplitter2.Location = new System.Drawing.Point(613, 282);
 			this.customSplitter2.Name = "customSplitter2";
 			this.customSplitter2.Size = new System.Drawing.Size(219, 10);
 			this.customSplitter2.TabIndex = 4;
@@ -490,7 +506,7 @@
             this.columnHeader4});
 			this.customListView1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.customListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.customListView1.Location = new System.Drawing.Point(613, 249);
+			this.customListView1.Location = new System.Drawing.Point(613, 292);
 			this.customListView1.Name = "customListView1";
 			this.customListView1.Size = new System.Drawing.Size(219, 97);
 			this.customListView1.TabIndex = 3;
@@ -511,7 +527,7 @@
 			// 
 			this.customSplitter1.Location = new System.Drawing.Point(603, 0);
 			this.customSplitter1.Name = "customSplitter1";
-			this.customSplitter1.Size = new System.Drawing.Size(10, 360);
+			this.customSplitter1.Size = new System.Drawing.Size(10, 403);
 			this.customSplitter1.TabIndex = 1;
 			this.customSplitter1.TabStop = false;
 			// 
@@ -532,7 +548,7 @@
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(603, 360);
+			this.lstServers.Size = new System.Drawing.Size(603, 403);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -572,6 +588,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(832, 573);
+			this.Controls.Add(this.tabPane);
 			this.Controls.Add(this.pnlInfo);
 			this.Controls.Add(this.pnlContent);
 			this.Controls.Add(this.lblStatus);
@@ -642,5 +659,6 @@
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private PingPanel pingPanel1;
+		private TabPane tabPane;
 	}
 }

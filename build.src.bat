@@ -48,6 +48,7 @@ CSC(CustomListView.cs)
 CSC(CustomSplitter.cs)
 CSC(InfoPanel.cs)
 CSC(TextBoxBorder.cs)
+CSC(TabPane.cs)
 CSC(PingGraph.cs)
 CSC(NM(PingGraph) PingPanel.cs PingPanel.Designer.cs)
 echo serverquery
@@ -57,7 +58,7 @@ CSC(NM(ServerInfo) serverproviders/IServerProvider.cs)
 CSC(NM2(ServerInfo,IServerProvider) serverproviders/TestServerProvider.cs)
 CSC(NM2(ServerInfo,IServerProvider) serverproviders/GameStateServerProvider.cs)
 echo frmmain
-CSC(NM(Icons.Designer) NM4(ServerInfo,ServerRow,IServerProvider,ServerQuery) NM5(CustomListView,CustomSplitter,InfoPanel,TextBoxBorder,PingPanel) M(mlauncher.obj) /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)
+CSC(NM(Icons.Designer) NM4(ServerInfo,ServerRow,IServerProvider,ServerQuery) NM6(CustomListView,CustomSplitter,InfoPanel,TextBoxBorder,PingPanel,TabPane) M(mlauncher.obj) /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)
 echo loader
 CSC(NM4(FrmMain,IServerProvider,TestServerProvider,GameStateServerProvider) Loader.cs)
 echo.
