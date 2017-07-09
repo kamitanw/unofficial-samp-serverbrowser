@@ -46,6 +46,8 @@ CSC(NM(ServerInfo) ServerRow.cs)
 echo uistuff
 CSC(CustomListView.cs)
 CSC(CustomSplitter.cs)
+CSC(InfoPanel.cs)
+CSC(TextBoxBorder.cs)
 echo serverquery
 CSC(NM(ServerInfo) ServerQuery.cs)
 echo serverproviders
@@ -53,11 +55,11 @@ CSC(NM(ServerInfo) serverproviders/IServerProvider.cs)
 CSC(NM2(ServerInfo,IServerProvider) serverproviders/TestServerProvider.cs)
 CSC(NM2(ServerInfo,IServerProvider) serverproviders/GameStateServerProvider.cs)
 echo frmmain
-CSC(NM7(Icons.Designer,ServerInfo,ServerRow,IServerProvider,ServerQuery,CustomListView,CustomSplitter) M(mlauncher.obj) /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)
+CSC(NM(Icons.Designer) NM4(ServerInfo,ServerRow,IServerProvider,ServerQuery) NM4(CustomListView,CustomSplitter,InfoPanel,TextBoxBorder) M(mlauncher.obj) /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)
 echo loader
 CSC(NM4(FrmMain,IServerProvider,TestServerProvider,GameStateServerProvider) Loader.cs)
 echo.
 echo - linking
-link Advapi32.lib user32.lib mlauncher.obj ulauncher.obj Icons.Designer.netmodule ServerInfo.netmodule ServerRow.netmodule IServerProvider.netmodule TestServerProvider.netmodule GameStateServerProvider.netmodule ServerQuery.netmodule CustomListView.netmodule CustomSplitter.netmodule frmMain.netmodule Loader.netmodule /entry:yugecin.sampbrowser.Loader.Main /subsystem:%subsystem% /out:sampbrowser.exe /ltcg /assemblyresource:Icons.resources,yugecin.sampbrowser.Icons.resources OREXIT
+link Advapi32.lib user32.lib *.obj *.netmodule /entry:yugecin.sampbrowser.Loader.Main /subsystem:%subsystem% /out:sampbrowser.exe /ltcg /assemblyresource:Icons.resources,yugecin.sampbrowser.Icons.resources OREXIT
 
 pause
