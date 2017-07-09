@@ -35,7 +35,17 @@
 			this.btnConnect = new System.Windows.Forms.Button();
 			this.lblStatus = new System.Windows.Forms.Label();
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.pnlInfo = new yugecin.sampbrowser.InfoPanel();
+			this.lblInfoLanguage = new System.Windows.Forms.Label();
+			this.lblInfoMode = new System.Windows.Forms.Label();
+			this.lblInfoPlayers = new System.Windows.Forms.Label();
+			this.lblInfoPing = new System.Windows.Forms.Label();
+			this.lblInfoAddress = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBoxBorder2 = new yugecin.sampbrowser.TextBoxBorder();
 			this.txtFilterMode = new System.Windows.Forms.TextBox();
@@ -48,6 +58,13 @@
 			this.chkFilterNotFull = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.chlFilterNoPW = new System.Windows.Forms.CheckBox();
+			this.customListView2 = new yugecin.sampbrowser.CustomListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.customSplitter2 = new yugecin.sampbrowser.CustomSplitter();
+			this.customListView1 = new yugecin.sampbrowser.CustomListView();
+			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.lstServers = new yugecin.sampbrowser.CustomListView();
 			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,15 +73,6 @@
 			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.lblInfoAddress = new System.Windows.Forms.Label();
-			this.lblInfoPing = new System.Windows.Forms.Label();
-			this.lblInfoPlayers = new System.Windows.Forms.Label();
-			this.lblInfoMode = new System.Windows.Forms.Label();
-			this.lblInfoLanguage = new System.Windows.Forms.Label();
 			this.pnlControls.SuspendLayout();
 			this.pnlContent.SuspendLayout();
 			this.pnlInfo.SuspendLayout();
@@ -141,6 +149,10 @@
 			this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlContent.Controls.Add(this.customListView2);
+			this.pnlContent.Controls.Add(this.customSplitter2);
+			this.pnlContent.Controls.Add(this.customListView1);
+			this.pnlContent.Controls.Add(this.linkLabel1);
 			this.pnlContent.Controls.Add(this.customSplitter1);
 			this.pnlContent.Controls.Add(this.lstServers);
 			this.pnlContent.Location = new System.Drawing.Point(0, 25);
@@ -148,6 +160,19 @@
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(832, 360);
 			this.pnlContent.TabIndex = 4;
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.BackColor = System.Drawing.SystemColors.Window;
+			this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel1.Location = new System.Drawing.Point(613, 346);
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new System.Drawing.Size(219, 14);
+			this.linkLabel1.TabIndex = 2;
+			this.linkLabel1.TabStop = true;
+			this.linkLabel1.Text = "linkLabel1";
+			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// pnlInfo
 			// 
@@ -174,6 +199,114 @@
 			this.pnlInfo.Name = "pnlInfo";
 			this.pnlInfo.Size = new System.Drawing.Size(832, 100);
 			this.pnlInfo.TabIndex = 5;
+			// 
+			// lblInfoLanguage
+			// 
+			this.lblInfoLanguage.AutoSize = true;
+			this.lblInfoLanguage.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfoLanguage.Location = new System.Drawing.Point(316, 82);
+			this.lblInfoLanguage.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.lblInfoLanguage.Name = "lblInfoLanguage";
+			this.lblInfoLanguage.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoLanguage.TabIndex = 25;
+			this.lblInfoLanguage.Text = "-";
+			this.lblInfoLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblInfoMode
+			// 
+			this.lblInfoMode.AutoSize = true;
+			this.lblInfoMode.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfoMode.Location = new System.Drawing.Point(316, 65);
+			this.lblInfoMode.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.lblInfoMode.Name = "lblInfoMode";
+			this.lblInfoMode.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoMode.TabIndex = 24;
+			this.lblInfoMode.Text = "-";
+			this.lblInfoMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblInfoPlayers
+			// 
+			this.lblInfoPlayers.AutoSize = true;
+			this.lblInfoPlayers.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfoPlayers.Location = new System.Drawing.Point(316, 31);
+			this.lblInfoPlayers.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.lblInfoPlayers.Name = "lblInfoPlayers";
+			this.lblInfoPlayers.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoPlayers.TabIndex = 24;
+			this.lblInfoPlayers.Text = "-";
+			this.lblInfoPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblInfoPing
+			// 
+			this.lblInfoPing.AutoSize = true;
+			this.lblInfoPing.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfoPing.Location = new System.Drawing.Point(316, 48);
+			this.lblInfoPing.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.lblInfoPing.Name = "lblInfoPing";
+			this.lblInfoPing.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoPing.TabIndex = 23;
+			this.lblInfoPing.Text = "-";
+			this.lblInfoPing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblInfoAddress
+			// 
+			this.lblInfoAddress.AutoSize = true;
+			this.lblInfoAddress.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfoAddress.Location = new System.Drawing.Point(316, 15);
+			this.lblInfoAddress.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.lblInfoAddress.Name = "lblInfoAddress";
+			this.lblInfoAddress.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoAddress.TabIndex = 21;
+			this.lblInfoAddress.Text = "-";
+			this.lblInfoAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(247, 82);
+			this.label10.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(64, 14);
+			this.label10.TabIndex = 20;
+			this.label10.Text = "Language:";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(247, 65);
+			this.label9.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(41, 14);
+			this.label9.TabIndex = 19;
+			this.label9.Text = "Mode:";
+			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(247, 48);
+			this.label8.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(34, 14);
+			this.label8.TabIndex = 18;
+			this.label8.Text = "Ping:";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(247, 31);
+			this.label7.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(51, 14);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "Players:";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label6
 			// 
@@ -301,6 +434,68 @@
 			this.chlFilterNoPW.Text = "No PW";
 			this.chlFilterNoPW.UseVisualStyleBackColor = true;
 			// 
+			// customListView2
+			// 
+			this.customListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.customListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+			this.customListView2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.customListView2.FullRowSelect = true;
+			this.customListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+			this.customListView2.HideSelection = false;
+			this.customListView2.Location = new System.Drawing.Point(613, 0);
+			this.customListView2.MultiSelect = false;
+			this.customListView2.Name = "customListView2";
+			this.customListView2.Size = new System.Drawing.Size(219, 239);
+			this.customListView2.TabIndex = 5;
+			this.customListView2.UseCompatibleStateImageBehavior = false;
+			this.customListView2.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Player";
+			this.columnHeader1.Width = 140;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Score";
+			this.columnHeader2.Width = 2000;
+			// 
+			// customSplitter2
+			// 
+			this.customSplitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.customSplitter2.Location = new System.Drawing.Point(613, 239);
+			this.customSplitter2.Name = "customSplitter2";
+			this.customSplitter2.Size = new System.Drawing.Size(219, 10);
+			this.customSplitter2.TabIndex = 4;
+			this.customSplitter2.TabStop = false;
+			// 
+			// customListView1
+			// 
+			this.customListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.customListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+			this.customListView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.customListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+			this.customListView1.Location = new System.Drawing.Point(613, 249);
+			this.customListView1.Name = "customListView1";
+			this.customListView1.Size = new System.Drawing.Size(219, 97);
+			this.customListView1.TabIndex = 3;
+			this.customListView1.UseCompatibleStateImageBehavior = false;
+			this.customListView1.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Rule";
+			this.columnHeader3.Width = 120;
+			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Value";
+			this.columnHeader4.Width = 1000;
+			// 
 			// customSplitter1
 			// 
 			this.customSplitter1.Location = new System.Drawing.Point(603, 0);
@@ -359,114 +554,6 @@
 			// 
 			this.colLanguage.Text = "Language";
 			this.colLanguage.Width = 90;
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(247, 31);
-			this.label7.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(51, 14);
-			this.label7.TabIndex = 17;
-			this.label7.Text = "Players:";
-			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(247, 48);
-			this.label8.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(34, 14);
-			this.label8.TabIndex = 18;
-			this.label8.Text = "Ping:";
-			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(247, 65);
-			this.label9.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(41, 14);
-			this.label9.TabIndex = 19;
-			this.label9.Text = "Mode:";
-			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(247, 82);
-			this.label10.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(64, 14);
-			this.label10.TabIndex = 20;
-			this.label10.Text = "Language:";
-			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblInfoAddress
-			// 
-			this.lblInfoAddress.AutoSize = true;
-			this.lblInfoAddress.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfoAddress.Location = new System.Drawing.Point(316, 15);
-			this.lblInfoAddress.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.lblInfoAddress.Name = "lblInfoAddress";
-			this.lblInfoAddress.Size = new System.Drawing.Size(11, 14);
-			this.lblInfoAddress.TabIndex = 21;
-			this.lblInfoAddress.Text = "-";
-			this.lblInfoAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblInfoPing
-			// 
-			this.lblInfoPing.AutoSize = true;
-			this.lblInfoPing.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfoPing.Location = new System.Drawing.Point(316, 48);
-			this.lblInfoPing.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.lblInfoPing.Name = "lblInfoPing";
-			this.lblInfoPing.Size = new System.Drawing.Size(11, 14);
-			this.lblInfoPing.TabIndex = 23;
-			this.lblInfoPing.Text = "-";
-			this.lblInfoPing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblInfoPlayers
-			// 
-			this.lblInfoPlayers.AutoSize = true;
-			this.lblInfoPlayers.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfoPlayers.Location = new System.Drawing.Point(316, 31);
-			this.lblInfoPlayers.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.lblInfoPlayers.Name = "lblInfoPlayers";
-			this.lblInfoPlayers.Size = new System.Drawing.Size(11, 14);
-			this.lblInfoPlayers.TabIndex = 24;
-			this.lblInfoPlayers.Text = "-";
-			this.lblInfoPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblInfoMode
-			// 
-			this.lblInfoMode.AutoSize = true;
-			this.lblInfoMode.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfoMode.Location = new System.Drawing.Point(316, 65);
-			this.lblInfoMode.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.lblInfoMode.Name = "lblInfoMode";
-			this.lblInfoMode.Size = new System.Drawing.Size(11, 14);
-			this.lblInfoMode.TabIndex = 24;
-			this.lblInfoMode.Text = "-";
-			this.lblInfoMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblInfoLanguage
-			// 
-			this.lblInfoLanguage.AutoSize = true;
-			this.lblInfoLanguage.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfoLanguage.Location = new System.Drawing.Point(316, 82);
-			this.lblInfoLanguage.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
-			this.lblInfoLanguage.Name = "lblInfoLanguage";
-			this.lblInfoLanguage.Size = new System.Drawing.Size(11, 14);
-			this.lblInfoLanguage.TabIndex = 25;
-			this.lblInfoLanguage.Text = "-";
-			this.lblInfoLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// FrmMain
 			// 
@@ -535,5 +622,13 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
+		private CustomListView customListView2;
+		private CustomSplitter customSplitter2;
+		private CustomListView customListView1;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ColumnHeader columnHeader2;
+		private System.Windows.Forms.ColumnHeader columnHeader3;
+		private System.Windows.Forms.ColumnHeader columnHeader4;
 	}
 }
