@@ -39,6 +39,8 @@ echo uistuff
 (csc /target:module %~2 CustomSplitter.cs)||(pause & exit)
 (csc /target:module %~2 InfoPanel.cs)||(pause & exit)
 (csc /target:module %~2 TextBoxBorder.cs)||(pause & exit)
+(csc /target:module %~2 PingGraph.cs)||(pause & exit)
+(csc /target:module %~2 /addmodule:PingGraph.netmodule PingPanel.cs PingPanel.Designer.cs)||(pause & exit)
 echo serverquery
 (csc /target:module %~2 /addmodule:ServerInfo.netmodule ServerQuery.cs)||(pause & exit)
 echo serverproviders
@@ -46,7 +48,7 @@ echo serverproviders
 (csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule serverproviders/TestServerProvider.cs)||(pause & exit)
 (csc /target:module %~2 /addmodule:ServerInfo.netmodule /addmodule:IServerProvider.netmodule serverproviders/GameStateServerProvider.cs)||(pause & exit)
 echo frmmain
-(csc /target:module %~2 /addmodule:Icons.Designer.netmodule /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule /addmodule:CustomSplitter.netmodule /addmodule:InfoPanel.netmodule /addmodule:TextBoxBorder.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)||(pause & exit)
+(csc /target:module %~2 /addmodule:Icons.Designer.netmodule /addmodule:ServerInfo.netmodule /addmodule:ServerRow.netmodule /addmodule:IServerProvider.netmodule /addmodule:ServerQuery.netmodule /addmodule:CustomListView.netmodule /addmodule:CustomSplitter.netmodule /addmodule:InfoPanel.netmodule /addmodule:TextBoxBorder.netmodule /addmodule:PingPanel.netmodule /addmodule:mlauncher.obj /define:WITHLAUNCHER FrmMain.cs FrmMain.Designer.cs)||(pause & exit)
 echo loader
 (csc /target:module %~2 /addmodule:FrmMain.netmodule /addmodule:IServerProvider.netmodule /addmodule:TestServerProvider.netmodule /addmodule:GameStateServerProvider.netmodule Loader.cs)||(pause & exit)
 echo.

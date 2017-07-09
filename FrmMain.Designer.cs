@@ -37,6 +37,7 @@
 			this.pnlContent = new System.Windows.Forms.Panel();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.pnlInfo = new yugecin.sampbrowser.InfoPanel();
+			this.pingPanel1 = new yugecin.sampbrowser.PingPanel();
 			this.lblInfoLanguage = new System.Windows.Forms.Label();
 			this.lblInfoMode = new System.Windows.Forms.Label();
 			this.lblInfoPlayers = new System.Windows.Forms.Label();
@@ -176,6 +177,7 @@
 			// 
 			// pnlInfo
 			// 
+			this.pnlInfo.Controls.Add(this.pingPanel1);
 			this.pnlInfo.Controls.Add(this.lblInfoLanguage);
 			this.pnlInfo.Controls.Add(this.lblInfoMode);
 			this.pnlInfo.Controls.Add(this.lblInfoPlayers);
@@ -200,6 +202,15 @@
 			this.pnlInfo.Size = new System.Drawing.Size(832, 100);
 			this.pnlInfo.TabIndex = 5;
 			// 
+			// pingPanel1
+			// 
+			this.pingPanel1.Font = new System.Drawing.Font("Arial", 8.25F);
+			this.pingPanel1.Location = new System.Drawing.Point(500, 23);
+			this.pingPanel1.Margin = new System.Windows.Forms.Padding(3, 23, 23, 3);
+			this.pingPanel1.Name = "pingPanel1";
+			this.pingPanel1.Size = new System.Drawing.Size(309, 76);
+			this.pingPanel1.TabIndex = 26;
+			// 
 			// lblInfoLanguage
 			// 
 			this.lblInfoLanguage.AutoSize = true;
@@ -207,9 +218,9 @@
 			this.lblInfoLanguage.Location = new System.Drawing.Point(316, 82);
 			this.lblInfoLanguage.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
 			this.lblInfoLanguage.Name = "lblInfoLanguage";
-			this.lblInfoLanguage.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoLanguage.Size = new System.Drawing.Size(25, 14);
 			this.lblInfoLanguage.TabIndex = 25;
-			this.lblInfoLanguage.Text = "-";
+			this.lblInfoLanguage.Text = "- - -";
 			this.lblInfoLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblInfoMode
@@ -219,9 +230,9 @@
 			this.lblInfoMode.Location = new System.Drawing.Point(316, 65);
 			this.lblInfoMode.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
 			this.lblInfoMode.Name = "lblInfoMode";
-			this.lblInfoMode.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoMode.Size = new System.Drawing.Size(25, 14);
 			this.lblInfoMode.TabIndex = 24;
-			this.lblInfoMode.Text = "-";
+			this.lblInfoMode.Text = "- - -";
 			this.lblInfoMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblInfoPlayers
@@ -231,9 +242,9 @@
 			this.lblInfoPlayers.Location = new System.Drawing.Point(316, 31);
 			this.lblInfoPlayers.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
 			this.lblInfoPlayers.Name = "lblInfoPlayers";
-			this.lblInfoPlayers.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoPlayers.Size = new System.Drawing.Size(25, 14);
 			this.lblInfoPlayers.TabIndex = 24;
-			this.lblInfoPlayers.Text = "-";
+			this.lblInfoPlayers.Text = "- - -";
 			this.lblInfoPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblInfoPing
@@ -243,9 +254,9 @@
 			this.lblInfoPing.Location = new System.Drawing.Point(316, 48);
 			this.lblInfoPing.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
 			this.lblInfoPing.Name = "lblInfoPing";
-			this.lblInfoPing.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoPing.Size = new System.Drawing.Size(25, 14);
 			this.lblInfoPing.TabIndex = 23;
-			this.lblInfoPing.Text = "-";
+			this.lblInfoPing.Text = "- - -";
 			this.lblInfoPing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblInfoAddress
@@ -255,9 +266,9 @@
 			this.lblInfoAddress.Location = new System.Drawing.Point(316, 15);
 			this.lblInfoAddress.Margin = new System.Windows.Forms.Padding(0, 2, 0, 1);
 			this.lblInfoAddress.Name = "lblInfoAddress";
-			this.lblInfoAddress.Size = new System.Drawing.Size(11, 14);
+			this.lblInfoAddress.Size = new System.Drawing.Size(25, 14);
 			this.lblInfoAddress.TabIndex = 21;
-			this.lblInfoAddress.Text = "-";
+			this.lblInfoAddress.Text = "- - -";
 			this.lblInfoAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label10
@@ -630,5 +641,6 @@
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
+		private PingPanel pingPanel1;
 	}
 }
