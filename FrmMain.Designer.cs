@@ -35,7 +35,6 @@
 			this.btnConnect = new System.Windows.Forms.Button();
 			this.lblStatus = new System.Windows.Forms.Label();
 			this.pnlContent = new System.Windows.Forms.Panel();
-			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.tabPane = new yugecin.sampbrowser.TabPane();
 			this.pnlInfo = new yugecin.sampbrowser.InfoPanel();
 			this.pingPanel1 = new yugecin.sampbrowser.PingPanel();
@@ -60,14 +59,6 @@
 			this.chkFilterNotFull = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.chlFilterNoPW = new System.Windows.Forms.CheckBox();
-			this.customListView2 = new yugecin.sampbrowser.CustomListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.customSplitter2 = new yugecin.sampbrowser.CustomSplitter();
-			this.customListView1 = new yugecin.sampbrowser.CustomListView();
-			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.lstServers = new yugecin.sampbrowser.CustomListView();
 			this.colPW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colHostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,11 +66,22 @@
 			this.colPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.colLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.pnlRightside = new System.Windows.Forms.Panel();
+			this.customListView2 = new yugecin.sampbrowser.CustomListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.customListView1 = new yugecin.sampbrowser.CustomListView();
+			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.customSplitter2 = new yugecin.sampbrowser.CustomSplitter();
+			this.customSplitter1 = new yugecin.sampbrowser.CustomSplitter();
 			this.pnlControls.SuspendLayout();
 			this.pnlContent.SuspendLayout();
 			this.pnlInfo.SuspendLayout();
 			this.textBoxBorder2.SuspendLayout();
 			this.textBoxBorder1.SuspendLayout();
+			this.pnlRightside.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlControls
@@ -151,30 +153,14 @@
 			this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlContent.Controls.Add(this.customListView2);
-			this.pnlContent.Controls.Add(this.customSplitter2);
-			this.pnlContent.Controls.Add(this.customListView1);
-			this.pnlContent.Controls.Add(this.linkLabel1);
 			this.pnlContent.Controls.Add(this.customSplitter1);
+			this.pnlContent.Controls.Add(this.pnlRightside);
 			this.pnlContent.Controls.Add(this.lstServers);
 			this.pnlContent.Location = new System.Drawing.Point(0, 25);
 			this.pnlContent.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(832, 403);
 			this.pnlContent.TabIndex = 4;
-			// 
-			// linkLabel1
-			// 
-			this.linkLabel1.BackColor = System.Drawing.SystemColors.Window;
-			this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.linkLabel1.Location = new System.Drawing.Point(613, 389);
-			this.linkLabel1.Name = "linkLabel1";
-			this.linkLabel1.Size = new System.Drawing.Size(219, 14);
-			this.linkLabel1.TabIndex = 2;
-			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = "linkLabel1";
-			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// tabPane
 			// 
@@ -461,76 +447,6 @@
 			this.chlFilterNoPW.Text = "No PW";
 			this.chlFilterNoPW.UseVisualStyleBackColor = true;
 			// 
-			// customListView2
-			// 
-			this.customListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.customListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-			this.customListView2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.customListView2.FullRowSelect = true;
-			this.customListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.customListView2.HideSelection = false;
-			this.customListView2.Location = new System.Drawing.Point(613, 0);
-			this.customListView2.MultiSelect = false;
-			this.customListView2.Name = "customListView2";
-			this.customListView2.Size = new System.Drawing.Size(219, 282);
-			this.customListView2.TabIndex = 5;
-			this.customListView2.UseCompatibleStateImageBehavior = false;
-			this.customListView2.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "Player";
-			this.columnHeader1.Width = 140;
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Score";
-			this.columnHeader2.Width = 2000;
-			// 
-			// customSplitter2
-			// 
-			this.customSplitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.customSplitter2.Location = new System.Drawing.Point(613, 282);
-			this.customSplitter2.Name = "customSplitter2";
-			this.customSplitter2.Size = new System.Drawing.Size(219, 10);
-			this.customSplitter2.TabIndex = 4;
-			this.customSplitter2.TabStop = false;
-			// 
-			// customListView1
-			// 
-			this.customListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.customListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-			this.customListView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.customListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.customListView1.Location = new System.Drawing.Point(613, 292);
-			this.customListView1.Name = "customListView1";
-			this.customListView1.Size = new System.Drawing.Size(219, 97);
-			this.customListView1.TabIndex = 3;
-			this.customListView1.UseCompatibleStateImageBehavior = false;
-			this.customListView1.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader3
-			// 
-			this.columnHeader3.Text = "Rule";
-			this.columnHeader3.Width = 120;
-			// 
-			// columnHeader4
-			// 
-			this.columnHeader4.Text = "Value";
-			this.columnHeader4.Width = 1000;
-			// 
-			// customSplitter1
-			// 
-			this.customSplitter1.Location = new System.Drawing.Point(603, 0);
-			this.customSplitter1.Name = "customSplitter1";
-			this.customSplitter1.Size = new System.Drawing.Size(10, 403);
-			this.customSplitter1.TabIndex = 1;
-			this.customSplitter1.TabStop = false;
-			// 
 			// lstServers
 			// 
 			this.lstServers.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -541,14 +457,14 @@
             this.colPing,
             this.colMode,
             this.colLanguage});
-			this.lstServers.Dock = System.Windows.Forms.DockStyle.Left;
+			this.lstServers.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lstServers.FullRowSelect = true;
 			this.lstServers.HideSelection = false;
 			this.lstServers.Location = new System.Drawing.Point(0, 0);
 			this.lstServers.Margin = new System.Windows.Forms.Padding(0);
 			this.lstServers.MultiSelect = false;
 			this.lstServers.Name = "lstServers";
-			this.lstServers.Size = new System.Drawing.Size(603, 403);
+			this.lstServers.Size = new System.Drawing.Size(832, 403);
 			this.lstServers.TabIndex = 0;
 			this.lstServers.UseCompatibleStateImageBehavior = false;
 			this.lstServers.View = System.Windows.Forms.View.Details;
@@ -582,6 +498,102 @@
 			this.colLanguage.Text = "Language";
 			this.colLanguage.Width = 90;
 			// 
+			// pnlRightside
+			// 
+			this.pnlRightside.Controls.Add(this.customSplitter2);
+			this.pnlRightside.Controls.Add(this.customListView1);
+			this.pnlRightside.Controls.Add(this.linkLabel1);
+			this.pnlRightside.Controls.Add(this.customListView2);
+			this.pnlRightside.Dock = System.Windows.Forms.DockStyle.Right;
+			this.pnlRightside.Location = new System.Drawing.Point(632, 0);
+			this.pnlRightside.Name = "pnlRightside";
+			this.pnlRightside.Size = new System.Drawing.Size(200, 403);
+			this.pnlRightside.TabIndex = 6;
+			// 
+			// customListView2
+			// 
+			this.customListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.customListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+			this.customListView2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.customListView2.FullRowSelect = true;
+			this.customListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+			this.customListView2.HideSelection = false;
+			this.customListView2.Location = new System.Drawing.Point(0, 0);
+			this.customListView2.MultiSelect = false;
+			this.customListView2.Name = "customListView2";
+			this.customListView2.Size = new System.Drawing.Size(200, 403);
+			this.customListView2.TabIndex = 6;
+			this.customListView2.UseCompatibleStateImageBehavior = false;
+			this.customListView2.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Player";
+			this.columnHeader1.Width = 140;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Score";
+			this.columnHeader2.Width = 2000;
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.BackColor = System.Drawing.SystemColors.Window;
+			this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel1.Location = new System.Drawing.Point(0, 389);
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new System.Drawing.Size(200, 14);
+			this.linkLabel1.TabIndex = 11;
+			this.linkLabel1.TabStop = true;
+			this.linkLabel1.Text = "linkLabel1";
+			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// customListView1
+			// 
+			this.customListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.customListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+			this.customListView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.customListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+			this.customListView1.Location = new System.Drawing.Point(0, 292);
+			this.customListView1.Name = "customListView1";
+			this.customListView1.Size = new System.Drawing.Size(200, 97);
+			this.customListView1.TabIndex = 12;
+			this.customListView1.UseCompatibleStateImageBehavior = false;
+			this.customListView1.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Rule";
+			this.columnHeader3.Width = 120;
+			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Value";
+			this.columnHeader4.Width = 1000;
+			// 
+			// customSplitter2
+			// 
+			this.customSplitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.customSplitter2.Location = new System.Drawing.Point(0, 282);
+			this.customSplitter2.Name = "customSplitter2";
+			this.customSplitter2.Size = new System.Drawing.Size(200, 10);
+			this.customSplitter2.TabIndex = 13;
+			this.customSplitter2.TabStop = false;
+			// 
+			// customSplitter1
+			// 
+			this.customSplitter1.Dock = System.Windows.Forms.DockStyle.Right;
+			this.customSplitter1.Location = new System.Drawing.Point(622, 0);
+			this.customSplitter1.Name = "customSplitter1";
+			this.customSplitter1.Size = new System.Drawing.Size(10, 403);
+			this.customSplitter1.TabIndex = 7;
+			this.customSplitter1.TabStop = false;
+			// 
 			// FrmMain
 			// 
 			this.AcceptButton = this.btnConnect;
@@ -607,6 +619,7 @@
 			this.textBoxBorder2.PerformLayout();
 			this.textBoxBorder1.ResumeLayout(false);
 			this.textBoxBorder1.PerformLayout();
+			this.pnlRightside.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -633,7 +646,6 @@
 		private System.Windows.Forms.ColumnHeader colPing;
 		private System.Windows.Forms.ColumnHeader colMode;
 		private System.Windows.Forms.ColumnHeader colLanguage;
-		private CustomSplitter customSplitter1;
 		private InfoPanel pnlInfo;
 		private TextBoxBorder textBoxBorder1;
 		private System.Windows.Forms.Label label1;
@@ -650,15 +662,17 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
-		private CustomListView customListView2;
-		private CustomSplitter customSplitter2;
-		private CustomListView customListView1;
-		private System.Windows.Forms.LinkLabel linkLabel1;
-		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ColumnHeader columnHeader2;
-		private System.Windows.Forms.ColumnHeader columnHeader3;
-		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private PingPanel pingPanel1;
 		private TabPane tabPane;
+		private CustomSplitter customSplitter1;
+		private System.Windows.Forms.Panel pnlRightside;
+		private CustomSplitter customSplitter2;
+		private CustomListView customListView1;
+		private System.Windows.Forms.ColumnHeader columnHeader3;
+		private System.Windows.Forms.ColumnHeader columnHeader4;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private CustomListView customListView2;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ColumnHeader columnHeader2;
 	}
 }

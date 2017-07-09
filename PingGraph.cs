@@ -16,6 +16,11 @@ namespace yugecin.sampbrowser {
 			dashpen.DashOffset = 0;
 		}
 
+		public PingGraph()
+		{
+			this.ResizeRedraw = true;
+		}
+
 		protected override void OnPaint( PaintEventArgs e )
 		{
 			e.Graphics.FillRectangle( bgbrush, 0 , 0, 12, Height );
